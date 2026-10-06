@@ -4,6 +4,8 @@ Sitio web público de portafolio personal de **Héctor Manuel Hernández Narváe
 
 Publicado en GitHub Pages: **[https://hmhn2525.github.io/](https://hmhn2525.github.io/)**
 
+[Verificación de la versión publicada](docs/verification.md): 21 vistas a 320, 768 y 1440 píxeles, navegación por teclado y preparación del formulario con datos ficticios, sin envío de mensajes. La evidencia identifica el commit revisado y sus límites.
+
 ---
 
 ## Contenido del sitio
