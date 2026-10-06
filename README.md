@@ -4,7 +4,7 @@ Sitio web público de portafolio personal de **Héctor Manuel Hernández Narváe
 
 Publicado en GitHub Pages: **[https://hmhn2525.github.io/](https://hmhn2525.github.io/)**
 
-[Verificación de la versión publicada](docs/verification.md): 21 vistas a 320, 768 y 1440 píxeles, navegación por teclado y preparación del formulario con datos ficticios, sin envío de mensajes. La evidencia identifica el commit revisado y sus límites.
+[Verificación histórica de la versión publicada](docs/verification.md): 21 vistas a 320, 768 y 1440 píxeles, navegación por teclado y preparación del formulario con datos ficticios, sin envío de mensajes. La evidencia identifica el commit revisado y sus límites.
 
 ---
 
@@ -28,7 +28,7 @@ El portafolio articula el ciclo operativo y analítico en seis proyectos (tres d
 
 ```text
 .
-├── index.html          # Portada interactiva del portafolio (Tailwind CSS, Alpine.js)
+├── index.html          # Portada de proyectos y evidencia (CSS propio, Alpine.js)
 ├── assets/             # Capturas y diagramas explicativos de los proyectos
 ├── projects/           # Casos de estudio individuales de cada proyecto
 ├── .nojekyll           # Desactiva el procesamiento de Jekyll en GitHub Pages
@@ -37,8 +37,8 @@ El portafolio articula el ciclo operativo y analítico en seis proyectos (tres d
 
 ---
 
-## Contacto
+## Evidencia y documentación
 
-- **Correo electrónico:** [hhernandeznarvaez.1516@gmail.com](mailto:hhernandeznarvaez.1516@gmail.com)
-- **LinkedIn:** [Héctor Manuel Hernández Narváez](https://www.linkedin.com/in/hector-manuel-hernández-narváez-b67933239/)
-- **Perfil de GitHub:** [@Hmhn2525](https://github.com/Hmhn2525)
+Cada proyecto tiene una vista previa y acceso directo a su caso documentado. Las capturas y ejemplos usan datos sintéticos; los casos distinguen las comprobaciones realizadas y los trabajos pendientes.
+
+[Explorar los repositorios públicos](https://github.com/Hmhn2525).

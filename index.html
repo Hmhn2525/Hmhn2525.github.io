@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Hector Manuel Hernández Narváez, Ingeniero en Tecnologías de la Información. Datos, analítica y automatización para mejorar procesos y tomar decisiones.">
+  <meta name="description" content="Portafolio de evidencia de Hector Manuel Hernández Narváez. Seis proyectos de datos y automatización con capturas, documentación y ejemplos reproducibles.">
   <meta name="theme-color" content="#f7f8fc">
   <meta name="author" content="Hector Manuel Hernández Narváez">
   <meta name="color-scheme" content="light dark">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232e54dc'/%3E%3Ctext x='10' y='43' font-family='Arial' font-size='30' font-weight='bold' fill='white'%3Ehm%3C/text%3E%3C/svg%3E">
   <meta property="og:title" content="Hector Manuel Hernández Narváez · Datos y automatización">
-  <meta property="og:description" content="Transformo datos y procesos en soluciones para tomar mejores decisiones. Conoce mi perfil y conversemos sobre tu próximo proyecto.">
+  <meta property="og:description" content="Portafolio de proyectos con capturas, casos documentados, ejemplos reproducibles y límites de la evidencia técnica.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hmhn2525.github.io/">
   <link rel="canonical" href="https://hmhn2525.github.io/">
@@ -140,9 +140,10 @@
     .projects-intro { max-width:285px; font-size:13px; line-height:1.8; color:var(--muted); }
     .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:38px; }
     .project { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--bg); display:flex; flex-direction:column; transition:border-color .25s,box-shadow .25s; }
-    .project-visual { position:relative; height:132px; padding:20px; background:var(--soft); color:var(--blue); display:grid; place-items:center; border-bottom:1px solid var(--line); }
-    .project-visual::after { content:''; position:absolute; inset:0; background-image:radial-gradient(var(--blue) .5px,transparent .5px); background-size:16px 16px; opacity:.09; }
-    .project-visual svg { width:100%; max-width:170px; height:90px; z-index:1; }
+    .project-visual { margin:0; padding:16px; background:var(--soft); border-bottom:1px solid var(--line); }
+    .project-visual img { display:block; width:100%; height:auto; max-height:240px; object-fit:contain; border-radius:8px; }
+    .project-visual figcaption { font-size:11px; color:var(--muted); margin-top:10px; }
+    .case-link { width:100%; margin-bottom:12px; }
     .project-body { padding:26px; display:flex; flex-direction:column; flex:1; }
     .project h3 { font-size:22px; letter-spacing:-.03em; font-weight:650; line-height:1.35; margin:16px 0 12px; }
     .project p { font-size:13px; color:var(--muted); line-height:1.8; margin:0; }
@@ -171,35 +172,6 @@
     .repo-pending small { font-size:11px; }
     .project-pending { font-size:12px; color:var(--muted); margin-top:6px; }
     .status-dot { height:6px; width:6px; border-radius:50%; background:var(--blue); flex:none; }
-    .contact-title { max-width:460px; font-size:clamp(32px,3.5vw,46px); margin-top:16px; }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; margin-top:0; align-items:start; }
-    .contact-copy { font-size:15px; line-height:1.8; margin-top:24px; max-width:400px; color:var(--muted); }
-    .email-block { margin-top:32px; }
-    .email { display:inline-block; font-size:14px; border-bottom:1px solid var(--blue); padding:8px 0; overflow-wrap:anywhere; }
-    .copy-email { border:1px solid var(--line); border-radius:7px; min-height:38px; padding:7px 11px; background:var(--panel); color:var(--muted); font-size:11px; margin-top:12px; }
-    .copy-email:hover { color:var(--blue); border-color:var(--blue); }
-    .socials { margin-top:30px; max-width:350px; }
-    .social-row { display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); padding:15px 0; font-size:13px; }
-    .social-row small { color:var(--muted); font-size:11px; }
-    a.social-row:hover { color:var(--blue); border-color:var(--blue); }
-    .contact-form { background:var(--panel); padding:32px; border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); }
-    .form-title { font-size:19px; font-weight:650; letter-spacing:-.02em; margin-bottom:6px; }
-    .form-intro { font-size:12px; color:var(--muted); margin-bottom:24px; }
-    label { display:block; font-size:12px; font-weight:600; margin-bottom:8px; }
-    label span { color:var(--muted); font-weight:400; }
-    input,textarea { width:100%; min-width:0; background:var(--bg); color:var(--ink); border:1px solid var(--line); border-radius:9px; padding:12px 14px; font-size:16px; transition:border-color .2s,box-shadow .2s; }
-    input:hover,textarea:hover { border-color:var(--muted); }
-    input:focus,textarea:focus { outline:2px solid var(--blue); outline-offset:2px; }
-    input::placeholder,textarea::placeholder { color:var(--muted); opacity:1; font-size:14px; }
-    input[aria-invalid="true"],textarea[aria-invalid="true"] { border-color:var(--error); }
-    textarea { resize:vertical; min-height:136px; }
-    .field { margin-bottom:20px; }
-    .field-error { font-size:12px; line-height:1.5; color:var(--error); margin-top:7px; }
-    .field-error:empty { display:none; }
-    .form-note { font-size:11px; color:var(--muted); line-height:1.7; margin:14px 0 0; }
-    .form-status:empty { display:none; }
-    .form-status { background:var(--soft); border-radius:8px; padding:12px; }
-    .mail-retry { color:var(--blue); font-size:12px; text-decoration:underline; text-underline-offset:3px; display:inline-block; margin-top:12px; }
     .footer { border-top:1px solid var(--line); padding-block:28px; font-size:12px; }
     .footer-row { display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .footer a { display:inline-flex; gap:12px; align-items:center; min-height:44px; }
@@ -214,10 +186,7 @@
       .hero-grid { gap:32px; }
       .data-card { padding:20px; }
       .section-grid { gap:40px; }
-      .contact-grid { gap:36px; }
       .project-body { padding:22px; }
-      .project-visual { padding:20px; height:132px; }
-      .contact-form { padding:24px; }
     }
     @media (max-width:800px) {
       .hero-grid { grid-template-columns:1.2fr 1fr; gap:28px; }
@@ -228,7 +197,6 @@
       .data-step strong { font-size:10px; }
       .project-grid { gap:20px; }
       .discipline-strip { gap:20px; }
-      .contact-grid { gap:28px; }
     }
     @media (max-width:640px) {
       html { scroll-padding-top:130px; }
@@ -239,7 +207,7 @@
       .theme-toggle { margin-left:auto; }
       .hero { padding-top:38px; padding-bottom:32px; }
       .hero::before { inset:0 0 auto 0; height:450px; }
-      .hero-grid,.section-grid,.contact-grid { grid-template-columns:minmax(0,1fr); }
+      .hero-grid,.section-grid { grid-template-columns:minmax(0,1fr); }
       .hero-grid { gap:24px; }
       h1 { font-size:clamp(36px,10.5vw,62px); margin:22px 0 20px; }
       .hero-label { font-size:10px; letter-spacing:.05em; }
@@ -265,12 +233,8 @@
       .projects-intro { max-width:none; }
       .project { display:flex; }
       .project-grid { grid-template-columns:minmax(0,1fr); }
-      .project-visual { height:124px; min-height:0; border-right:0; border-bottom:1px solid var(--line); }
       .project-body { padding:24px; }
       .project-status { margin-top:0; }
-      .contact-grid { gap:32px; }
-      .contact-form { padding:22px; }
-      .contact-title { font-size:36px; }
       .email { font-size:13px; }
       .footer-row { flex-wrap:wrap; }
     }
@@ -284,7 +248,7 @@
     <div class="wrap nav-row">
       <a href="#inicio" class="brand" aria-label="Hector Manuel, inicio"><span class="brand-mark" aria-hidden="true">hm</span><span class="brand-name">Hector Manuel<span class="accent">.</span></span></a>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto <span class="accent" aria-hidden="true">↗</span></a>
+        <a href="#proyectos">Proyectos y evidencia</a><a href="#sobre-mi">Sobre mí</a>
       </nav>
       <button hidden id="theme-toggle" type="button" class="theme-toggle" @click="toggle()" :aria-label="dark ? 'Activar modo claro' : 'Activar modo oscuro'" :aria-pressed="dark" aria-label="Cambiar tema">
         <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.7 13.1A9 9 0 0 1 10.9 3.3a9 9 0 1 0 9.8 9.8Z"/></svg>
@@ -296,13 +260,13 @@
     <section id="inicio" class="hero wrap" aria-labelledby="nombre">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow muted hero-label"><span class="status-dot" aria-hidden="true"></span>Especialidad · Análisis de datos &amp; Automatización operativa</p>
+          <p class="eyebrow muted hero-label"><span class="status-dot" aria-hidden="true"></span>Portafolio de evidencia · Datos &amp; Automatización</p>
           <h1 id="nombre">Hector Manuel <span class="surname">Hernández<br>Narváez<span style="color:var(--ink)">.</span></span></h1>
-          <p class="hero-tagline">Datos organizados.<br>Procesos automatizados.<br>Decisiones claras.</p>
-          <p class="hero-description">Conecto fuentes dispersas, diseño modelos y automatizo flujos de trabajo para transformar tareas manuales en herramientas confiables y paneles accionables.</p>
+          <p class="hero-tagline">Proyectos documentados.<br>Evidencia visible.<br>Alcance verificable.</p>
+          <p class="hero-description">Explora seis trabajos de análisis de datos y automatización: el problema, la solución, las capturas y las comprobaciones disponibles en cada caso.</p>
           <div class="hero-actions">
-            <a href="#proyectos" class="button button-primary">Ver proyectos <span aria-hidden="true">↗</span></a>
-            <a href="#contacto" class="button">Hablemos <span aria-hidden="true">→</span></a>
+            <a href="#proyectos" class="button button-primary">Explorar proyectos <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Hmhn2525" class="button" target="_blank" rel="noopener noreferrer">Explorar repositorios <span aria-hidden="true">↗</span></a>
           </div>
           <p class="hero-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>Ingeniero en Tecnologías de la Información</p>
         </div>
@@ -328,9 +292,22 @@
         <div class="capability"><span class="capability-number mono" aria-hidden="true">03</span><div><h2>Simplificar el trabajo</h2><p>Automatización de tareas recurrentes.</p></div></div>
       </div>
     </section>
+    <section id="proyectos" class="section projects-section" aria-labelledby="proyectos-titulo">
+      <div class="wrap">
+        <div class="reveal projects-heading"><div><p class="eyebrow muted mono">01 / Proyectos y evidencia</p><h2 id="proyectos-titulo" class="section-title">Trabajos y evidencia.</h2></div><p class="projects-intro">Seis proyectos articulados en torno al análisis de datos y la automatización de procesos operativos. Tres destacados y tres complementarios con evidencia y límites verificables.</p></div>
+        <div class="project-grid">
+<article id="proyecto-data-warehouse-agricola" class="project reveal" aria-labelledby="titulo-data-warehouse-agricola"><figure class="project-visual"><img src="assets/data-warehouse-agricola-demo.png" alt="Vista de la evidencia pública de Data Warehouse Agrícola" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 01 · Datos y analítica</span><h3 id="titulo-data-warehouse-agricola">Data Warehouse Agrícola</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Organizar registros de trabajo, fletes y catálogos distribuidos para consulta analítica y costos unitarios sin duplicar importes.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Módulos GAS de consolidación y validación sobre Sheets. Modelo SQL sintético pedagógico en SQLite con agregación previa al cruce.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>Looker Studio</span><span>SQL / SQLite</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Cuatro módulos inspeccionados y modelo SQL sintético reproducible. Endpoint GAS con error de declaración pendiente.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/data-warehouse-agricola.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de Data Warehouse Agrícola">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Revisión de 4 archivos GAS con 16 definiciones de función. Ejemplo SQLite: agregación previa, producción cero, faltantes y unicidad.</p><h4>Alcance y pendientes</h4><p>Consultas BigQuery reportadas pendientes de inspección técnica. El endpoint declara duplicado HOJA_LOG; editor pasa sintaxis.</p><p><a href="projects/data-warehouse-agricola.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/data-warehouse-agricola" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Data Warehouse Agrícola (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+<article id="proyecto-fueltrack" class="project reveal" aria-labelledby="titulo-fueltrack"><figure class="project-visual"><img src="assets/fueltrack-demo.png" alt="Vista de la evidencia pública de FuelTrack" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 02 · Operación y control</span><h3 id="titulo-fueltrack">FuelTrack</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Coordinar solicitud, aprobación administrativa de cuotas y despacho de combustible en campo sin dobles cargos.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Flujo en GAS y Sheets con bloqueo concurrente, claves de idempotencia y cola offline en IndexedDB mediante PWA.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>IndexedDB</span><span>PWA</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>65 pruebas locales simuladas correctas (evidencia histórica). Caso documental y recorrido interactivo con datos ficticios publicados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/fueltrack.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de FuelTrack">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>65 pruebas simuladas históricas (autorización, saldos, fallos y reintentos). Ejemplo público: coherencia aritmética y valor esperado de 0 L adicionales en escenario sintético.</p><h4>Alcance y pendientes</h4><p>Integración en cuentas activas de Google, permisos y dispositivos en campo pendientes. El ejemplo público es sintético y no valida el mecanismo operativo de idempotencia ni ejecuta peticiones reales.</p><p><a href="projects/fueltrack.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/fueltrack" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de FuelTrack (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+<article id="proyecto-inventario-fisico" class="project reveal" aria-labelledby="titulo-inventario-fisico"><figure class="project-visual"><img src="assets/inventario-fisico-portafolio-demo.png" alt="Vista de la evidencia pública de Inventario Físico" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 03 · Inventario y trazabilidad</span><h3 id="titulo-inventario-fisico">Inventario Físico</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Digitalizar auditorías de almacén distinguiendo de forma estricta una partida pendiente de un conteo confirmado de cero.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Plataforma web (Subir reporte → Contar → Resumen), control de versiones por partida y conciliación con diferencias exactas.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>ASP.NET Core</span><span>PostgreSQL</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Caso documental público con captura de interfaz y API sintéticas. Cinco ejemplos didácticos comprobados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/inventario-fisico-portafolio.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de Inventario Físico">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Captura de interfaz real revisada con API sintética. Ejemplo didáctico de igualdad, faltante, sobrante, cero y pendiente.</p><h4>Alcance y pendientes</h4><p>Código operativo privado. 16 casos sintéticos Playwright previos no reejecutados en esta etapa. Concurrencia y ERP externos pendientes.</p><p><a href="projects/inventario-fisico-portafolio.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/inventario-fisico-portafolio" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Inventario Físico (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+<article id="proyecto-gestion-presupuestaria" class="project reveal" aria-labelledby="titulo-gestion-presupuestaria"><figure class="project-visual"><img src="assets/gestion-presupuestaria-demo.png" alt="Vista de la evidencia pública de Gestión Presupuestaria" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 04 · Finanzas</span><h3 id="titulo-gestion-presupuestaria">Gestión Presupuestaria</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Capturar y revisar presupuestos descentralizados por centro de costo evitando confusiones de versión y sobreescrituras.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Plantillas y presupuestos nativos con ciclo formal de revisión (borrador a validación) y control de concurrencia en servidor.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>Python</span><span>FastAPI</span><span>SQLite</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>19 pruebas sintéticas seleccionadas de servidor correctas. Caso documental y recorrido interactivo publicados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/gestion-presupuestaria.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de Gestión Presupuestaria">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Pruebas de presupuesto nativo, asignaciones, capacidades y participantes verificadas el 5 de octubre de 2026.</p><h4>Alcance y pendientes</h4><p>La selección de pruebas no sustituye la suite completa. Validación contable y aceptación de Finanzas pendientes.</p><p><a href="projects/gestion-presupuestaria.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/gestion-presupuestaria" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Gestión Presupuestaria (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+<article id="proyecto-seguridad-salud" class="project reveal" aria-labelledby="titulo-seguridad-salud"><figure class="project-visual"><img src="assets/seguridad-salud-trabajo-demo.png" alt="Vista de la evidencia pública de Seguridad y Salud en el Trabajo" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 05 · Gobernanza</span><h3 id="titulo-seguridad-salud">Seguridad y Salud en el Trabajo</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Automatizar formularios de SST, normalizar fechas/catálogos y actualizar hojas conservando estricta privacidad.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Enrutador GAS con DocumentLock, normalización de semanas ISO y actualización en Google Sheets por lotes.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>Google Forms</span><span>Looker Studio</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>27 funciones identificadas y cuatro pruebas de utilidades verificadas localmente sin servicios Google.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/seguridad-salud-trabajo.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de Seguridad y Salud en el Trabajo">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Revisión estática de código y 4 pruebas de utilidades locales. Ejemplo público sin datos personales ni clínicos.</p><h4>Alcance y pendientes</h4><p>Endpoint HTTP sin doGet. Fechas límite requieren validación adicional. Activadores y reporting clínico pendientes.</p><p><a href="projects/seguridad-salud-trabajo.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/seguridad-salud-trabajo" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Seguridad y Salud en el Trabajo (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+<article id="proyecto-registros-tic" class="project reveal" aria-labelledby="titulo-registros-tic"><figure class="project-visual"><img src="assets/registros-tic-demo.jpg" alt="Vista de la evidencia pública de Registros TIC" loading="lazy"><figcaption>Evidencia pública · Datos sintéticos</figcaption></figure><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 06 · Soporte y trazabilidad</span><h3 id="titulo-registros-tic">Registros TIC</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Reunir incidencias de soporte, activos, solicitantes y conformidad en un único flujo móvil trazable.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Aplicación web React/TypeScript con catálogos relacionados, atenciones, historial y demostración saneada.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>PWA</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Guardado local e historial verificados con persistencia tras recarga. Demostración saneada pública.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><a class="button button-primary case-link" href="projects/registros-tic.html">Ver caso y evidencia <span aria-hidden="true">→</span></a><details class="case-study"><summary aria-label="Ver caso de estudio de Registros TIC">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Instalación limpia, linter (oxlint) y compilación (tsc + vite build) verificados el 6 de octubre de 2026.</p><h4>Alcance y pendientes</h4><p>Dos dependencias transitivas con advertencia alta pendientes de actualizar. Autenticación y sincronización remota sin validar.</p><p><a href="projects/registros-tic.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/registros-tic" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Registros TIC (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
+        </div>
+      </div>
+    </section>
     <section id="sobre-mi" class="section" aria-labelledby="sobre-titulo">
       <div class="wrap section-grid reveal">
-        <div><p class="eyebrow muted mono">01 / Sobre mí</p><h2 id="sobre-titulo" class="section-title">Entender el proceso.<br>Construir la solución.</h2><div class="credential"><strong>Ingeniería en Tecnologías de la Información</strong><span>Universidad Popular de la Chontalpa</span></div></div>
+        <div><p class="eyebrow muted mono">02 / Sobre mí</p><h2 id="sobre-titulo" class="section-title">Entender el proceso.<br>Construir la solución.</h2><div class="credential"><strong>Ingeniería en Tecnologías de la Información</strong><span>Universidad Popular de la Chontalpa</span></div></div>
         <div class="section-copy">
           <p>Soy Hector Manuel, Ingeniero en Tecnologías de la Información. Mi especialidad se centra en el <strong>análisis de datos y la automatización de procesos operativos</strong>: comprender a fondo el problema de negocio, estructurar la información y construir herramientas que resuelvan cuellos de botella en la operación diaria.</p>
           <p>Mi portafolio presenta tres proyectos destacados: el <strong>Data Warehouse Agrícola</strong> (consolidación y modelo SQL reproducible), <strong>FuelTrack</strong> (automatización de suministro con control de concurrencia e idempotencia) e <strong>Inventario Físico</strong> (auditoría de existencias distinguiendo cero de pendientes). Asimismo, incluye experiencia complementaria en gestión presupuestaria, gobernanza de SST y plataformas de soporte técnico.</p>
@@ -339,113 +316,9 @@
         </div>
       </div>
     </section>
-    <section id="proyectos" class="section projects-section" aria-labelledby="proyectos-titulo">
-      <div class="wrap">
-        <div class="reveal projects-heading"><div><p class="eyebrow muted mono">02 / Proyectos</p><h2 id="proyectos-titulo" class="section-title">Tecnología aplicada a retos reales.</h2></div><p class="projects-intro">Seis proyectos articulados en torno al análisis de datos y la automatización de procesos operativos. Tres destacados y tres complementarios con evidencia y límites verificables.</p></div>
-        <div class="project-grid">
-<article id="proyecto-data-warehouse-agricola" class="project reveal" aria-labelledby="titulo-data-warehouse-agricola"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><ellipse cx="115" cy="32" rx="51" ry="16" stroke="currentColor" stroke-width="2"/><path d="M64 32v62c0 9 23 16 51 16s51-7 51-16V32M64 53c0 9 23 16 51 16s51-7 51-16M64 74c0 9 23 16 51 16s51-7 51-16" stroke="currentColor" stroke-width="2"/><path d="M20 65h28m134 0h28M115 113v18" stroke="currentColor" stroke-dasharray="4 4"/><rect x="8" y="53" width="22" height="24" rx="4" fill="currentColor" opacity=".2"/><rect x="200" y="53" width="22" height="24" rx="4" fill="currentColor" opacity=".2"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 01 · Datos y analítica</span><h3 id="titulo-data-warehouse-agricola">Data Warehouse Agrícola</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Organizar registros de trabajo, fletes y catálogos distribuidos para consulta analítica y costos unitarios sin duplicar importes.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Módulos GAS de consolidación y validación sobre Sheets. Modelo SQL sintético pedagógico en SQLite con agregación previa al cruce.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>Looker Studio</span><span>SQL / SQLite</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Cuatro módulos inspeccionados y modelo SQL sintético reproducible. Endpoint GAS con error de declaración pendiente.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de Data Warehouse Agrícola">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Revisión de 4 archivos GAS con 16 definiciones de función. Ejemplo SQLite: agregación previa, producción cero, faltantes y unicidad.</p><h4>Alcance y pendientes</h4><p>Consultas BigQuery reportadas pendientes de inspección técnica. El endpoint declara duplicado HOJA_LOG; editor pasa sintaxis.</p><p><a href="projects/data-warehouse-agricola.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/data-warehouse-agricola" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Data Warehouse Agrícola (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-<article id="proyecto-fueltrack" class="project reveal" aria-labelledby="titulo-fueltrack"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><path d="M57 72h117m-59-37v74" stroke="currentColor" stroke-dasharray="4 5" opacity=".5"/><rect x="12" y="49" width="45" height="46" rx="8" stroke="currentColor"/><rect x="91" y="11" width="48" height="48" rx="8" fill="currentColor" opacity=".15"/><rect x="91" y="88" width="48" height="48" rx="8" stroke="currentColor"/><rect x="173" y="49" width="45" height="46" rx="8" fill="currentColor"/><path d="M25 64h19m-19 8h19m-19 8h12M105 105h20m-20 8h20m-20 8h13" stroke="currentColor" stroke-width="2"/><path d="m186 72 6 6 13-14" stroke="var(--bg)" stroke-width="2"/><path d="m107 33 6 6 10-12" stroke="currentColor" stroke-width="2"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 02 · Operación y control</span><h3 id="titulo-fueltrack">FuelTrack</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Coordinar solicitud, aprobación administrativa de cuotas y despacho de combustible en campo sin dobles cargos.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Flujo en GAS y Sheets con bloqueo concurrente, claves de idempotencia y cola offline en IndexedDB mediante PWA.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>IndexedDB</span><span>PWA</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>65 pruebas locales simuladas correctas (evidencia histórica). Caso documental y recorrido interactivo con datos ficticios publicados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de FuelTrack">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>65 pruebas simuladas históricas (autorización, saldos, fallos y reintentos). Ejemplo público: coherencia aritmética y valor esperado de 0 L adicionales en escenario sintético.</p><h4>Alcance y pendientes</h4><p>Integración en cuentas activas de Google, permisos y dispositivos en campo pendientes. El ejemplo público es sintético y no valida el mecanismo operativo de idempotencia ni ejecuta peticiones reales.</p><p><a href="projects/fueltrack.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/fueltrack" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de FuelTrack (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-<article id="proyecto-inventario-fisico" class="project reveal" aria-labelledby="titulo-inventario-fisico"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><rect x="42" y="28" width="62" height="52" rx="6" stroke="currentColor" stroke-width="2"/><path d="M42 46h62" stroke="currentColor" opacity=".4"/><rect x="126" y="28" width="62" height="52" rx="6" stroke="currentColor" stroke-width="2"/><path d="M126 46h62" stroke="currentColor" opacity=".4"/><rect x="84" y="62" width="62" height="54" rx="6" fill="currentColor" opacity=".12" stroke="currentColor" stroke-width="2"/><path d="M84 80h62" stroke="currentColor" opacity=".4"/><path d="m102 97 7 7 15-16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Proyecto destacado / 03 · Inventario y trazabilidad</span><h3 id="titulo-inventario-fisico">Inventario Físico</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Digitalizar auditorías de almacén distinguiendo de forma estricta una partida pendiente de un conteo confirmado de cero.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Plataforma web (Subir reporte → Contar → Resumen), control de versiones por partida y conciliación con diferencias exactas.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>ASP.NET Core</span><span>PostgreSQL</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Caso documental público con captura de interfaz y API sintéticas. Cinco ejemplos didácticos comprobados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de Inventario Físico">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Captura de interfaz real revisada con API sintética. Ejemplo didáctico de igualdad, faltante, sobrante, cero y pendiente.</p><h4>Alcance y pendientes</h4><p>Código operativo privado. 16 casos sintéticos Playwright previos no reejecutados en esta etapa. Concurrencia y ERP externos pendientes.</p><p><a href="projects/inventario-fisico-portafolio.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/inventario-fisico-portafolio" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Inventario Físico (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-<article id="proyecto-gestion-presupuestaria" class="project reveal" aria-labelledby="titulo-gestion-presupuestaria"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><circle cx="72" cy="73" r="46" stroke="currentColor" stroke-width="15" opacity=".12"/><path d="M72 27a46 46 0 0 1 44 59" stroke="currentColor" stroke-width="15"/><path d="M72 73 42 108" stroke="currentColor" opacity=".4"/><rect x="149" y="94" width="14" height="25" rx="2" fill="currentColor" opacity=".3"/><rect x="172" y="68" width="14" height="51" rx="2" fill="currentColor" opacity=".55"/><rect x="195" y="43" width="14" height="76" rx="2" fill="currentColor"/><path d="M145 129h70" stroke="currentColor" opacity=".4"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 04 · Finanzas</span><h3 id="titulo-gestion-presupuestaria">Gestión Presupuestaria</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Capturar y revisar presupuestos descentralizados por centro de costo evitando confusiones de versión y sobreescrituras.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Plantillas y presupuestos nativos con ciclo formal de revisión (borrador a validación) y control de concurrencia en servidor.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>Python</span><span>FastAPI</span><span>SQLite</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>19 pruebas sintéticas seleccionadas de servidor correctas. Caso documental y recorrido interactivo publicados.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de Gestión Presupuestaria">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Pruebas de presupuesto nativo, asignaciones, capacidades y participantes verificadas el 5 de octubre de 2026.</p><h4>Alcance y pendientes</h4><p>La selección de pruebas no sustituye la suite completa. Validación contable y aceptación de Finanzas pendientes.</p><p><a href="projects/gestion-presupuestaria.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/gestion-presupuestaria" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Gestión Presupuestaria (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-<article id="proyecto-seguridad-salud" class="project reveal" aria-labelledby="titulo-seguridad-salud"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><path d="M115 15 180 38v40c0 25-28 43-65 56-37-13-65-31-65-56V38z" stroke="currentColor" stroke-width="3"/><path d="m85 72 20 20 40-42" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 05 · Gobernanza</span><h3 id="titulo-seguridad-salud">Seguridad y Salud en el Trabajo</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Automatizar formularios de SST, normalizar fechas/catálogos y actualizar hojas conservando estricta privacidad.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Enrutador GAS con DocumentLock, normalización de semanas ISO y actualización en Google Sheets por lotes.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>Google Apps Script</span><span>Google Sheets</span><span>Google Forms</span><span>Looker Studio</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>27 funciones identificadas y cuatro pruebas de utilidades verificadas localmente sin servicios Google.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de Seguridad y Salud en el Trabajo">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Revisión estática de código y 4 pruebas de utilidades locales. Ejemplo público sin datos personales ni clínicos.</p><h4>Alcance y pendientes</h4><p>Endpoint HTTP sin doGet. Fechas límite requieren validación adicional. Activadores y reporting clínico pendientes.</p><p><a href="projects/seguridad-salud-trabajo.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/seguridad-salud-trabajo" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Seguridad y Salud en el Trabajo (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-<article id="proyecto-registros-tic" class="project reveal" aria-labelledby="titulo-registros-tic"><div class="project-visual" aria-hidden="true"><svg viewBox="0 0 230 145" fill="none"><rect x="33" y="18" width="164" height="109" rx="10" stroke="currentColor" opacity=".6"/><path d="M33 45h164" stroke="currentColor" opacity=".3"/><path d="M53 66h59m-59 15h78m-78 15h43" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".6"/><circle cx="162" cy="91" r="20" fill="currentColor" opacity=".12"/><path d="m153 91 6 6 13-14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="project-body"><span class="eyebrow mono accent">Experiencia complementaria / 06 · Soporte y trazabilidad</span><h3 id="titulo-registros-tic">Registros TIC</h3><dl class="project-story"><div class="story-step"><dt>Problema</dt><dd>Reunir incidencias de soporte, activos, solicitantes y conformidad en un único flujo móvil trazable.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Solución</dt><dd>Aplicación web React/TypeScript con catálogos relacionados, atenciones, historial y demostración saneada.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Tecnologías</dt><dd><div class="story-tech"><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>PWA</span></div><span class="flow-arrow" aria-hidden="true">↓</span></dd></div><div class="story-step"><dt>Resultado</dt><dd>Guardado local e historial verificados con persistencia tras recarga. Demostración saneada pública.<span class="flow-arrow" aria-hidden="true">↓</span></dd></div></dl><div class="project-actions"><details class="case-study"><summary aria-label="Ver caso de estudio de Registros TIC">Ver caso de estudio <span class="case-icon" aria-hidden="true">+</span></summary><div class="case-content"><h4>Evidencia</h4><p>Instalación limpia, linter (oxlint) y compilación (tsc + vite build) verificados el 6 de octubre de 2026.</p><h4>Alcance y pendientes</h4><p>Dos dependencias transitivas con advertencia alta pendientes de actualizar. Autenticación y sincronización remota sin validar.</p><p><a href="projects/registros-tic.html">Leer caso de estudio completo</a></p></div></details><a class="repo-link" href="https://github.com/Hmhn2525/registros-tic" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Registros TIC (abre en otra pestaña)">Ver repositorio <span aria-hidden="true">↗</span></a></div></div></article>
-        </div>
-      </div>
-    </section>
-    <section id="contacto" class="section" aria-labelledby="contacto-titulo">
-      <div class="wrap reveal">
-        <div class="contact-grid">
-          <div>
-            <p class="eyebrow muted mono">03 / Contacto</p>
-            <h2 id="contacto-titulo" class="section-title contact-title">El siguiente paso empieza con una conversación<span class="accent">.</span></h2>
-            <p class="contact-copy">¿Una oportunidad para tu equipo o un proyecto que necesita claridad? Cuéntame el contexto y lo que te gustaría resolver.</p>
-            <div class="email-block"><p class="eyebrow muted mono">Escríbeme directamente</p><a id="contact-address" class="email" href="mailto:hhernandeznarvaez.1516@gmail.com">hhernandeznarvaez.1516@gmail.com <span class="accent" aria-hidden="true">↗</span></a><br><button hidden id="copy-email" class="copy-email" type="button">Copiar correo</button><p id="copy-status" class="form-note" role="status"></p></div>
-            <nav class="socials" aria-label="Redes profesionales">
-              <a class="social-row" href="https://www.linkedin.com/in/hector-manuel-hernández-narváez-b67933239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Hector Manuel (abre en otra pestaña)"><span>LinkedIn</span><span class="accent" aria-hidden="true">↗</span></a>
-              <a class="social-row" href="https://github.com/Hmhn2525" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Hector Manuel (abre en otra pestaña)"><span>GitHub</span><span class="accent" aria-hidden="true">↗</span></a>
-            </nav>
-          </div>
-          <form id="contact-form" class="contact-form" aria-labelledby="form-title" aria-describedby="contact-note">
-            <h3 id="form-title" class="form-title">Cuéntame qué tienes en mente.</h3><p class="form-intro">Todos los campos son obligatorios.</p>
-            <div class="field"><label for="contact-name">Tu nombre</label><input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Nombre y apellido" required maxlength="120" aria-describedby="name-error"><p id="name-error" class="field-error"></p></div>
-            <div class="field"><label for="contact-email">Tu correo</label><input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="none" placeholder="nombre@empresa.com" required maxlength="254" aria-describedby="email-error"><p id="email-error" class="field-error"></p></div>
-            <div class="field"><label for="contact-message">Tu mensaje</label><textarea id="contact-message" name="message" placeholder="¿Qué buscas, en qué etapa estás y cómo puedo ayudarte?" required maxlength="2000" aria-describedby="message-error"></textarea><p id="message-error" class="field-error"></p></div>
-            <button class="button button-primary" id="contact-submit" type="submit" disabled>Abrir correo <span aria-hidden="true">↗</span></button>
-            <p class="form-note" id="contact-note">El mensaje se prepara en tu aplicación de correo. Revísalo y envíalo desde allí.</p>
-            <p id="form-status" class="form-note form-status" role="status" aria-live="polite"></p>
-            <a id="mail-retry" class="mail-retry" hidden>Volver a abrir el mensaje preparado ↗</a>
-            <noscript><p class="form-note">Para preparar el mensaje desde el formulario, activa JavaScript o utiliza el enlace de correo.</p></noscript>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
   <footer class="footer"><div class="wrap footer-row"><p class="muted">© <span id="copyright-year">2026</span> Hector Manuel Hernández Narváez</p><a href="#inicio">Volver al inicio <span class="accent" aria-hidden="true">↑</span></a></div></footer>
   <script>
-    function buildContactMailto(name, email, message) {
-      const subject = 'Contacto desde portfolio · ' + name.trim();
-      const body = 'Nombre: ' + name.trim() + '\nCorreo: ' + email.trim() + '\n\n' + message.trim();
-      return 'mailto:hhernandeznarvaez.1516@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-    const retry = document.getElementById('mail-retry');
-    const fields = [form.elements.name, form.elements.email, form.elements.message];
-    const errors = {
-      name: document.getElementById('name-error'),
-      email: document.getElementById('email-error'),
-      message: document.getElementById('message-error')
-    };
-    function validateField(field) {
-      let error = '';
-      if (!field.value.trim()) error = {name:'Escribe tu nombre.',email:'Escribe tu correo.',message:'Cuéntame sobre la oportunidad o el proyecto.'}[field.name];
-      else if (field.validity.typeMismatch) error = 'Escribe un correo válido, por ejemplo nombre@empresa.com.';
-      else if (field.validity.tooLong) error = 'Acorta el contenido de este campo.';
-      errors[field.name].textContent = error;
-      if (error) field.setAttribute('aria-invalid', 'true');
-      else field.removeAttribute('aria-invalid');
-      return !error;
-    }
-    document.getElementById('contact-submit').disabled = false;
-    // Keep native validation if JavaScript is unavailable; use inline errors once ready.
-    form.noValidate = true;
-    form.addEventListener('input', (event) => {
-      if (event.target.getAttribute('aria-invalid') === 'true') validateField(event.target);
-      status.textContent = '';
-      retry.hidden = true;
-      retry.removeAttribute('href');
-    });
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const results = fields.map(validateField);
-      const invalid = results.indexOf(false);
-      if (invalid !== -1) {
-        retry.hidden = true;
-        retry.removeAttribute('href');
-        status.textContent = 'Revisa los campos indicados antes de abrir tu aplicación de correo.';
-        fields[invalid].focus();
-        return;
-      }
-      const uri = buildContactMailto(fields[0].value, fields[1].value, fields[2].value);
-      retry.href = uri;
-      retry.hidden = false;
-      status.textContent = 'Mensaje preparado. Revísalo y completa el envío en tu aplicación de correo. Si no se abre, puedes reintentarlo o escribirme directamente.';
-      window.location.href = uri;
-    });
-    const copyButton = document.getElementById('copy-email');
-    if (navigator.clipboard && window.isSecureContext) {
-      copyButton.hidden = false;
-      copyButton.addEventListener('click', async () => {
-        const feedback = document.getElementById('copy-status');
-        try {
-          const address = document.getElementById('contact-address').getAttribute('href').slice(7);
-          await navigator.clipboard.writeText(address);
-          feedback.textContent = 'Correo copiado.';
-        } catch (_) {
-          feedback.textContent = 'No se pudo copiar. Puedes seleccionar el correo o abrir su enlace.';
-        }
-      });
-    }
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if ('IntersectionObserver' in window && !motion.matches) {
