@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "scope": "In-memory idempotency illustration; no Google service calls.",
+  "unit": "DEMO-UNIT-001",
+  "warehouse": "Almacén Demo A",
+  "approved_liters": "100",
+  "attempts": [
+    {
+      "number": 1,
+      "operation_key": "DEMO-OP-001",
+      "liters": "20"
+    },
+    {
+      "number": 2,
+      "operation_key": "DEMO-OP-001",
+      "liters": "20"
+    }
+  ],
+  "expected_unique_dispatches": 1,
+  "expected_debited_liters": "20",
+  "expected_remaining_liters": "80",
+  "expected_retry_additional_liters": "0"
+}

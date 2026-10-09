@@ -1,0 +1,45 @@
+{
+  "synthetic": true,
+  "count_id": "DEMO-INV-001",
+  "warehouse": "Almacén Demo A",
+  "lines": [
+    {
+      "article": "DEMO-001",
+      "expected": "10",
+      "counted": "10",
+      "state": "Coincide",
+      "difference": "0"
+    },
+    {
+      "article": "DEMO-002",
+      "expected": "2.125",
+      "counted": "1.125",
+      "state": "Faltante",
+      "difference": "-1.000"
+    },
+    {
+      "article": "DEMO-003",
+      "expected": "4",
+      "counted": "5.5",
+      "state": "Sobrante",
+      "difference": "1.5"
+    },
+    {
+      "article": "DEMO-004",
+      "expected": "3",
+      "counted": "0",
+      "state": "Faltante",
+      "difference": "-3"
+    },
+    {
+      "article": "DEMO-005",
+      "expected": "6",
+      "counted": null,
+      "state": "Sin contar",
+      "difference": null
+    }
+  ],
+  "expected_counted_lines": 4,
+  "expected_pending_lines": 1,
+  "expected_net_difference": "-2.5"
+}

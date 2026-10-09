@@ -1,0 +1,71 @@
+{
+  "synthetic": true,
+  "currency": "MXN",
+  "period": "Ejercicio demo",
+  "profiles": [
+    {
+      "id": "capture-north",
+      "name": "Persona Demo 01",
+      "role": "capture",
+      "assignedCenterIds": ["DEMO-CC-001"]
+    },
+    {
+      "id": "capture-south",
+      "name": "Persona Demo 02",
+      "role": "capture",
+      "assignedCenterIds": ["DEMO-CC-002"]
+    },
+    {
+      "id": "reviewer",
+      "name": "Persona Revisa 01",
+      "role": "reviewer",
+      "assignedCenterIds": ["DEMO-CC-001", "DEMO-CC-002"]
+    }
+  ],
+  "centers": [
+    {
+      "id": "DEMO-CC-001",
+      "name": "Centro Norte",
+      "initialVersion": 1,
+      "items": [
+        {
+          "id": "personnel",
+          "name": "Personal",
+          "months": ["100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00", "100.00"]
+        },
+        {
+          "id": "operations",
+          "name": "Operación",
+          "months": ["200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00", "200.00"]
+        },
+        {
+          "id": "training",
+          "name": "Capacitación",
+          "months": ["0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", null]
+        }
+      ]
+    },
+    {
+      "id": "DEMO-CC-002",
+      "name": "Centro Sur",
+      "initialVersion": 1,
+      "items": [
+        {
+          "id": "personnel",
+          "name": "Personal",
+          "months": ["120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00", "120.00"]
+        },
+        {
+          "id": "operations",
+          "name": "Operación",
+          "months": ["80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00", "80.00"]
+        },
+        {
+          "id": "equipment",
+          "name": "Equipo",
+          "months": ["0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", null]
+        }
+      ]
+    }
+  ]
+}

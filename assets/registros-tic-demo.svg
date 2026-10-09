@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="781" viewBox="0 0 1280 781" role="img" aria-labelledby="title desc">
+<title id="title">Seguimiento e informe de tickets · mockup sintético</title>
+<desc id="desc">Modelo documental independiente con cinco tickets ficticios, historial e informe agregado. Todos los valores son ficticios. No es captura de la interfaz operativa.</desc>
+<rect width="1280" height="100%" rx="22" fill="#f3f6fb"/>
+<rect width="1280" height="72" rx="22" fill="#14243a"/>
+<rect y="54" width="1280" height="18" fill="#14243a"/>
+<text x="44" y="45" fill="#fff" font-size="20" font-family="Segoe UI,Arial,sans-serif" font-weight="700">PORTAFOLIO / LABORATORIO</text>
+<text x="1234" y="45" fill="#b9c9e2" text-anchor="end" font-size="14" font-family="Segoe UI,Arial,sans-serif">SOLO DATOS FICTICIOS</text>
+<text x="48" y="116" fill="#17233b" font-size="30" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Seguimiento e informe de tickets</text>
+<text x="48" y="145" fill="#506078" font-size="16" font-family="Segoe UI,Arial,sans-serif">Modelo documental independiente con cinco tickets ficticios, historial e informe agregado.</text>
+<rect x="946" y="89" width="286" height="42" rx="9" fill="#fff1d0" stroke="#96600c" stroke-width="2"/>
+<text x="1089" y="116" text-anchor="middle" fill="#694300" font-size="15" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MOCKUP SINTÉTICO · NO UI ORIGINAL</text>
+<rect x="48.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="64.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Tickets</text>
+<text x="64.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">5</text>
+<text x="64.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">fixture local</text>
+<rect x="348.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="364.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Abiertos</text>
+<text x="364.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">2</text>
+<text x="364.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">no terminales</text>
+<rect x="648.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="664.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Atendidos</text>
+<text x="664.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">2</text>
+<text x="664.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">estado más reciente</text>
+<rect x="948.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="964.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Categorías</text>
+<text x="964.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">4</text>
+<text x="964.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">agrupación demo</text>
+<rect x="48" y="278" width="1184" height="289" rx="14" fill="#fff" stroke="#cbd5e1"/>
+<text x="70" y="307" fill="#17233b" font-size="18" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Vista de resultados ficticios</text>
+<text x="1210" y="307" text-anchor="end" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">Escenario público · lectura local</text>
+<rect x="70" y="320" width="1140" height="38" rx="5" fill="#eaf0fa"/>
+<text x="80.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Ticket demo</text>
+<text x="308.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Categoría</text>
+<text x="536.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Estado actual</text>
+<text x="764.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Historial</text>
+<text x="992.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Técnico demo</text>
+<rect x="70" y="321" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-TIC-001</text>
+<text x="308.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Hardware / Equipo</text>
+<text x="536.0" y="346" fill="#17623c" font-size="13" font-family="Segoe UI,Arial,sans-serif">Atendido</text>
+<text x="764.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">3 eventos</text>
+<text x="992.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Técnico Demo A</text>
+<text x="80.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-TIC-002</text>
+<text x="308.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Redes y Conectividad</text>
+<text x="536.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">En Proceso</text>
+<text x="764.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2 eventos</text>
+<text x="992.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Técnico Demo A</text>
+<rect x="70" y="407" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-TIC-003</text>
+<text x="308.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Hardware / Equipo</text>
+<text x="536.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="764.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">1 eventos</text>
+<text x="992.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Técnico Demo B</text>
+<text x="80.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-TIC-004</text>
+<text x="308.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Impresoras y Escáneres</text>
+<text x="536.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Cerrado</text>
+<text x="764.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">4 eventos</text>
+<text x="992.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Técnico Demo B</text>
+<rect x="70" y="493" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-TIC-005</text>
+<text x="308.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Software / Aplicaciones</text>
+<text x="536.0" y="518" fill="#17623c" font-size="13" font-family="Segoe UI,Arial,sans-serif">Atendido</text>
+<text x="764.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2 eventos</text>
+<text x="992.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Técnico Demo A</text>
+<rect x="48" y="581" width="1184" height="48" rx="10" fill="#e8f0ff" stroke="#b8c9e4"/>
+<text x="66" y="610" fill="#213d70" font-size="14" font-family="Segoe UI,Arial,sans-serif">Los cambios de seguimiento viven solo en memoria; no se prueba autenticación ni sincronización remota.</text>
+<rect x="48" y="631" width="1184" height="125" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="68" y="658" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ORIGEN · </tspan>Fixture JSON y verificador público independiente de la aplicación.</text>
+<text x="68" y="684" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">FECHA · </tspan>2026-10-09<tspan dx="28" font-weight="700">VERSIÓN · </tspan>Demo documental · fixture 2026-10-09</text>
+<text x="68" y="711" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ALCANCE · </tspan>No representa funciones actuales de la app ni contiene tickets reales.</text>
+<text x="68" y="736" fill="#8b2d21" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="800">ILUSTRACIÓN VECTORIAL; NO ES CAPTURA DE UNA UI OPERATIVA.</text>
+</svg>

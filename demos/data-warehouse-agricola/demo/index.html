@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard didáctico con datos ficticios, resultados SQL verificados y filtros por centro y periodo.">
+  <title>Dashboard agrícola ficticio · Data Warehouse Agrícola</title>
+  <script src="../examples/outputs/dashboard-data.js"></script>
+  <style>
+    :root{color-scheme:light;--ink:#17233b;--muted:#506078;--line:#cbd5e1;--paper:#f4f7fb;--card:#fff;--blue:#214a9a;--blue-soft:#e7efff;--amber:#805000;--amber-soft:#fff3d6;--green:#17623c;--green-soft:#e5f5eb;--red:#a32020;--red-soft:#fff0ee;--focus:#a65c00}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}main{width:min(1180px,100%);margin:auto;padding:32px clamp(16px,4vw,40px) 60px}h1{max-width:850px;font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.15;margin:.35rem 0 1rem}h2{font-size:1.25rem;line-height:1.3;margin:0 0 1rem}h3{font-size:1rem;margin:0 0 .4rem}.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}.intro{max-width:75ch;color:var(--muted)}.scope{border:2px solid #a66c00;background:var(--amber-soft);border-radius:12px;padding:14px 16px;font-weight:650;margin:22px 0}.scope p{margin:0}.panel,.metric{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field label{display:block;font-weight:700;margin-bottom:6px}.field select{width:100%;min-height:44px;padding:8px 10px;border:1px solid #77869b;border-radius:8px;background:white;color:var(--ink);font:inherit}.hint,.muted{color:var(--muted);font-size:.92rem}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.metric{margin:0;padding:16px}.metric dt{color:var(--muted);font-size:.88rem}.metric dd{font-size:1.45rem;font-weight:800;margin:4px 0}.metric small{display:block;color:var(--muted)}.table-wrap{overflow-x:auto;max-width:100%;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;background:white}caption{text-align:left;padding:10px 12px;color:var(--muted);font-size:.9rem}th,td{padding:10px 12px;border-bottom:1px solid #dbe2eb;text-align:left;vertical-align:top}thead th{background:#edf2f9;white-space:nowrap}tbody tr:last-child td{border-bottom:0}.numeric{text-align:right;font-variant-numeric:tabular-nums}.status{display:inline-block;border-radius:999px;padding:2px 9px;margin:2px 4px 2px 0;font-size:.82rem;font-weight:700;white-space:nowrap}.flag-missing{color:#623f00;background:#ffedbf}.flag-zero{color:#7b3100;background:#ffe5d3}.flag-high{color:#971c1c;background:#ffe2df}.flag-none{color:var(--green);background:var(--green-soft)}.chart{display:grid;gap:9px;min-width:230px}.chart-row{display:grid;grid-template-columns:minmax(82px,115px) minmax(70px,1fr) 74px;align-items:center;gap:10px}.chart-label,.chart-value{font-size:.88rem;font-variant-numeric:tabular-nums}.chart-value{text-align:right}.track{height:14px;background:#e5eaf1;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--blue);border-radius:99px;min-width:0}.empty{padding:18px;border:1px dashed #8796aa;border-radius:10px;color:var(--muted)}a{color:#1c4e9a;text-decoration-thickness:1px;text-underline-offset:3px}a:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.links{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:1fr}}
+    @media(max-width:420px){main{padding:22px 14px 40px}.panel{padding:15px}.metrics{gap:9px}.metric{padding:12px}.metric dd{font-size:1.2rem}.chart-row{grid-template-columns:78px minmax(50px,1fr) 65px;gap:7px}.chart-label,.chart-value{font-size:.8rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Demostración reproducible · SQLite · datos ficticios</p>
+    <h1>Rendimiento agrícola por centro y periodo</h1>
+    <p class="intro">Filtros, indicadores, tendencias y alertas usan la salida agregada por <code>examples/verify.py</code>. El dashboard abre esa exportación local; no consulta servicios externos.</p>
+    <div class="scope" role="note"><p>ALCANCE: escenario enteramente ficticio. Esta demo acredita solo el flujo público con SQLite. No acredita BigQuery, Looker Studio conectado ni la interfaz operativa.</p></div>
+  </header>
+
+  <section class="panel" aria-labelledby="filters-title">
+    <h2 id="filters-title">Filtros</h2>
+    <div class="filters">
+      <div class="field"><label for="center-filter">Centro</label><select id="center-filter"><option value="all">Todos los centros</option></select></div>
+      <div class="field"><label for="period-filter">Periodo</label><select id="period-filter"><option value="all">Todos los periodos</option></select></div>
+    </div>
+    <p id="filter-summary" class="hint" aria-live="polite"></p>
+  </section>
+
+  <section aria-labelledby="metrics-title">
+    <h2 id="metrics-title">Indicadores del filtro</h2>
+    <dl class="metrics">
+      <div class="metric"><dt>Producción registrada</dt><dd id="metric-units">—</dd><small id="metric-units-note"></small></div>
+      <div class="metric"><dt>Costos registrados</dt><dd id="metric-cost">—</dd><small id="metric-cost-note"></small></div>
+      <div class="metric"><dt>Costo unitario ponderado</dt><dd id="metric-unit-cost">—</dd><small>Solo pares con costo y producción mayor que cero</small></div>
+      <div class="metric"><dt>Combinaciones con alerta</dt><dd id="metric-alerts">—</dd><small id="metric-alerts-note"></small></div>
+    </dl>
+  </section>
+
+  <section class="panel" aria-labelledby="trend-title">
+    <h2 id="trend-title">Tendencia por periodo</h2>
+    <p class="hint">Barras muestran unidades agregadas. Tabla incluye costo total y costo unitario ponderado. Las barras tienen equivalente tabular.</p>
+    <div id="trend-chart" class="chart" aria-hidden="true"></div>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Tendencia por periodo; tabla desplazable horizontalmente">
+      <table>
+        <caption>Tendencia calculada desde las mismas 24 filas SQL exportadas</caption>
+        <thead><tr><th scope="col">Periodo</th><th scope="col" class="numeric">Unidades registradas</th><th scope="col" class="numeric">Costos registrados</th><th scope="col" class="numeric">Costo unitario ponderado</th></tr></thead>
+        <tbody id="trend-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="alerts-title">
+    <h2 id="alerts-title">Anomalías y datos incompletos</h2>
+    <p id="benchmark-note" class="hint"></p>
+    <ul id="anomaly-list"></ul>
+    <p class="hint">Reglas: combinación sin producción, combinación sin costo, producción registrada en cero y costo unitario igual o mayor a 2 veces el promedio ponderado global del escenario. Son señales didácticas, no reglas operativas.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="detail-title">
+    <h2 id="detail-title">Detalle centro-periodo</h2>
+    <p class="hint">“Pendiente” significa dato faltante. El valor 0 es un registro explícito. Desplaza la tabla horizontalmente si hace falta.</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Resultados por centro y periodo; tabla desplazable horizontalmente">
+      <table>
+        <caption>Resultados exportados de SQLite; importes en pesos mexicanos (MXN)</caption>
+        <thead><tr><th scope="col">Centro</th><th scope="col">Periodo</th><th scope="col" class="numeric">Unidades</th><th scope="col" class="numeric">Costo</th><th scope="col" class="numeric">Costo unitario</th><th scope="col">Señales</th></tr></thead>
+        <tbody id="detail-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <nav class="links" aria-label="Archivos reproducibles">
+    <a href="../docs/images/mockup-synthetic.svg">Ver mockup sintético; no es captura de UI original</a>
+    <a href="../examples/outputs/aggregated-results.csv" download>Descargar salida CSV verificada</a>
+    <a href="../docs/data-dictionary.md">Ver diccionario de datos</a>
+    <a href="../README.md">Volver al README</a>
+  </nav>
+  <footer><p id="source-note">Cargando salida local generada…</p><p>Todos los centros, movimientos e importes de este escenario son inventados.</p></footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const data = window.AGRICOLA_DEMO_DATA;
+  const centerFilter = document.getElementById('center-filter');
+  const periodFilter = document.getElementById('period-filter');
+  const numberFormat = new Intl.NumberFormat('es-MX', { maximumFractionDigits: 0 });
+  const moneyFormat = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' });
+  const anomalyLabels = {
+    missing_production: 'Producción pendiente',
+    missing_cost: 'Costo pendiente',
+    zero_production: 'Producción cero',
+    high_unit_cost: 'Costo unitario alto'
+  };
+  const byId = (id) => document.getElementById(id);
+  const money = (value) => value === null || value === undefined ? 'Pendiente' : moneyFormat.format(Number(value));
+  const units = (value) => value === null || value === undefined ? 'Pendiente' : numberFormat.format(value);
+  const matchedCostPerUnit = (rows) => {
+    const matched = rows.filter((row) => row.production_units > 0 && row.cost_cents !== null);
+    const totalUnits = matched.reduce((sum, row) => sum + row.production_units, 0);
+    const totalCents = matched.reduce((sum, row) => sum + row.cost_cents, 0);
+    return totalUnits ? (totalCents / 100 / totalUnits) : null;
+  };
+  const label = (row) => `${row.center_id} · ${row.period_label}`;
+
+  if (!data || data.synthetic !== true || !Array.isArray(data.rows)) {
+    byId('source-note').textContent = 'No se encontró la salida verificada. Ejecute python examples/verify.py desde esta carpeta del proyecto.';
+    return;
+  }
+  for (const center of data.centers) {
+    const option = document.createElement('option');
+    option.value = center.center_id;
+    option.textContent = `${center.center_id} · ${center.center_name}`;
+    centerFilter.append(option);
+  }
+  for (const period of data.periods) {
+    const option = document.createElement('option');
+    option.value = period.period_id;
+    option.textContent = period.period_label;
+    periodFilter.append(option);
+  }
+
+  function render() {
+    const selected = data.rows.filter((row) =>
+      (centerFilter.value === 'all' || row.center_id === centerFilter.value) &&
+      (periodFilter.value === 'all' || row.period_id === periodFilter.value)
+    );
+    const availableUnits = selected.reduce((sum, row) => sum + (row.production_units ?? 0), 0);
+    const knownCosts = selected.reduce((sum, row) => sum + (row.cost_cents ?? 0), 0);
+    const unitCost = matchedCostPerUnit(selected);
+    const alerts = selected.filter((row) => row.anomalies.length > 0);
+    byId('metric-units').textContent = numberFormat.format(availableUnits);
+    byId('metric-units-note').textContent = `${selected.filter((row) => row.production_units !== null).length} combinaciones con registro; cero cuenta como dato.`;
+    byId('metric-cost').textContent = moneyFormat.format(knownCosts / 100);
+    byId('metric-cost-note').textContent = `${selected.filter((row) => row.cost_cents !== null).length} combinaciones con costo registrado.`;
+    byId('metric-unit-cost').textContent = unitCost === null ? 'Pendiente' : moneyFormat.format(unitCost);
+    byId('metric-alerts').textContent = numberFormat.format(alerts.length);
+    byId('metric-alerts-note').textContent = `${alerts.reduce((sum, row) => sum + row.anomalies.length, 0)} señales en esas combinaciones.`;
+    byId('filter-summary').textContent = `${selected.length} combinaciones de centro y periodo visibles.`;
+    byId('benchmark-note').textContent = `Referencia global del escenario: ${money(data.benchmark.weighted_unit_cost_mxn)} por unidad. Umbral de costo unitario alto: ${money(data.benchmark.threshold_mxn_per_unit)} (2× promedio ponderado).`;
+
+    const visiblePeriods = data.periods.filter((period) => periodFilter.value === 'all' || period.period_id === periodFilter.value);
+    const trends = visiblePeriods.map((period) => {
+      const periodRows = selected.filter((row) => row.period_id === period.period_id);
+      return {
+        label: period.period_label,
+        units: periodRows.reduce((sum, row) => sum + (row.production_units ?? 0), 0),
+        costs: periodRows.reduce((sum, row) => sum + (row.cost_cents ?? 0), 0),
+        unitCost: matchedCostPerUnit(periodRows)
+      };
+    });
+    const maximum = Math.max(1, ...trends.map((trend) => trend.units));
+    byId('trend-chart').replaceChildren(...trends.map((trend) => {
+      const line = document.createElement('div');
+      line.className = 'chart-row';
+      const name = document.createElement('span');
+      name.className = 'chart-label';
+      name.textContent = trend.label;
+      const track = document.createElement('span');
+      track.className = 'track';
+      const bar = document.createElement('span');
+      bar.className = 'bar';
+      bar.style.width = `${(trend.units / maximum) * 100}%`;
+      track.append(bar);
+      const value = document.createElement('span');
+      value.className = 'chart-value';
+      value.textContent = units(trend.units);
+      line.append(name, track, value);
+      return line;
+    }));
+    byId('trend-body').replaceChildren(...trends.map((trend) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<th scope="row"></th><td class="numeric"></td><td class="numeric"></td><td class="numeric"></td>`;
+      row.cells[0].textContent = trend.label;
+      row.cells[1].textContent = units(trend.units);
+      row.cells[2].textContent = moneyFormat.format(trend.costs / 100);
+      row.cells[3].textContent = trend.unitCost === null ? 'Pendiente' : moneyFormat.format(trend.unitCost);
+      return row;
+    }));
+
+    const anomalyList = byId('anomaly-list');
+    anomalyList.replaceChildren();
+    if (alerts.length === 0) {
+      const item = document.createElement('li');
+      item.textContent = 'No hay señales para esta selección.';
+      anomalyList.append(item);
+    } else {
+      for (const row of alerts) {
+        const item = document.createElement('li');
+        item.textContent = `${label(row)}: ${row.anomalies.map((flag) => anomalyLabels[flag]).join(', ')}.`;
+        anomalyList.append(item);
+      }
+    }
+
+    const detail = byId('detail-body');
+    detail.replaceChildren(...selected.map((item) => {
+      const row = document.createElement('tr');
+      row.innerHTML = '<th scope="row"></th><td></td><td class="numeric"></td><td class="numeric"></td><td class="numeric"></td><td></td>';
+      row.cells[0].textContent = `${item.center_id} · ${item.center_name}`;
+      row.cells[1].textContent = item.period_label;
+      row.cells[2].textContent = units(item.production_units);
+      row.cells[3].textContent = item.cost_mxn === null ? 'Pendiente' : money(item.cost_mxn);
+      row.cells[4].textContent = item.unit_cost_mxn === null ? 'Pendiente' : money(item.unit_cost_mxn);
+      const cell = row.cells[5];
+      if (item.anomalies.length === 0) {
+        const badge = document.createElement('span');
+        badge.className = 'status flag-none';
+        badge.textContent = 'Sin señal';
+        cell.append(badge);
+      } else {
+        for (const flag of item.anomalies) {
+          const badge = document.createElement('span');
+          badge.className = `status ${flag === 'high_unit_cost' ? 'flag-high' : flag === 'zero_production' ? 'flag-zero' : 'flag-missing'}`;
+          badge.textContent = anomalyLabels[flag] || flag;
+          cell.append(badge);
+        }
+      }
+      return row;
+    }));
+  }
+
+  centerFilter.addEventListener('change', render);
+  periodFilter.addEventListener('change', render);
+  byId('source-note').textContent = `${data.rows.length} filas generadas desde la consulta SQL y exportadas a CSV y dashboard-data.js. ${data.scope}`;
+  render();
+})();
+</script>
+</body>
+</html>

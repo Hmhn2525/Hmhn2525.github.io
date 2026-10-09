@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demostración independiente con datos ficticios y alcance explícito.">
+<title>Inventario Físico · conteo y conciliación · demo sintética</title>
+<style>
+:root{color-scheme:light;--ink:#17233b;--muted:#506078;--line:#cbd5e1;--blue:#214a9a;--soft:#f3f6fb;--focus:#a65c00}
+*{box-sizing:border-box}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{width:min(1100px,100%);margin:auto;padding:24px clamp(14px,4vw,38px) 52px}h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.2;margin:.35rem 0 .5rem}
+h2{font-size:1.2rem;margin:0 0 12px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.banner{border:2px solid #93600c;background:#fff3d6;border-radius:12px;padding:12px 15px;margin:0 0 20px;font-weight:650}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.button{min-height:42px;padding:9px 14px;border:1px solid #214a9a;border-radius:8px;background:#214a9a;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.button.secondary{background:#fff;color:#214a9a}.button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metric{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcff}.metric span{display:block;color:var(--muted);font-size:.85rem}.metric strong{display:block;font-size:1.25rem;margin-top:4px}
+.table-wrap{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;background:#fff}caption{text-align:left;padding:9px 11px;color:var(--muted)}th,td{padding:9px 11px;border-bottom:1px solid #e1e7ef;text-align:left;vertical-align:top}thead th{background:#edf2f9;white-space:nowrap}tbody tr:last-child td{border-bottom:0}
+input,select{font:inherit;min-height:40px;border:1px solid #8190a5;border-radius:7px;padding:6px 8px;background:white;color:var(--ink)}input[type=number]{width:105px}
+.muted{color:var(--muted)}.status{font-weight:700}.status.ok{color:#17623c}.status.warn{color:#805000}.status.bad{color:#a32020}.event-list{padding-left:20px}.event-list li{margin:5px 0}
+@media(max-width:760px){.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:14px}}
+@media(max-width:380px){main{padding-inline:12px}.summary{gap:7px}.metric{padding:9px}.metric strong{font-size:1.05rem}.button{width:100%}}
+</style>
+</head><body><main>
+<div class="banner" role="note"><strong>Demo sintética e independiente.</strong> Datos inventados · sin servicios externos · cambios solo en memoria · no es la UI operativa.</div>
+<header><p class="eyebrow">PORTAFOLIO · EJEMPLO REPRODUCIBLE</p><h1>Inventario Físico · conteo y conciliación</h1><p class="muted">Ejemplo decimal ficticio de coincidencia, faltante, sobrante, cero confirmado y pendiente excluido.</p></header>
+
+<section class="panel"><h2>Conciliación editable</h2><p>Modifica los conteos ficticios. Un cero cuenta como captura; un campo vacío queda pendiente.</p>
+<div class="toolbar"><button class="button" id="reset" type="button">Restaurar fixture</button><span id="status" class="muted" aria-live="polite"></span></div>
+<div class="summary" id="summary"></div></section>
+<section class="panel"><div class="table-wrap" tabindex="0" role="region" aria-label="Conciliación desplazable horizontalmente"><table><caption>Conteo didáctico · no produce ajustes</caption><thead><tr><th>Código demo</th><th>Sistema</th><th>Conteo físico</th><th>Diferencia</th><th>Estado</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+
+<footer class="panel"><p><strong>Origen:</strong> fixture ficticia del repositorio · <strong>Fecha:</strong> 2026-10-09 · <strong>Versión:</strong> ejemplo público independiente.</p>
+<p><strong>Alcance:</strong> Ejemplo decimal ficticio de coincidencia, faltante, sobrante, cero confirmado y pendiente excluido. No acredita interfaz original, acceso, persistencia o aceptación operativa.</p>
+<a href="../README.md">Volver a la documentación del ejemplo</a></footer>
+<script id="scenario-data" type="application/json">{"synthetic":true,"count_id":"DEMO-INV-001","warehouse":"Almacén Demo A","lines":[{"article":"DEMO-001","expected":"10","counted":"10","state":"Coincide","difference":"0"},{"article":"DEMO-002","expected":"2.125","counted":"1.125","state":"Faltante","difference":"-1.000"},{"article":"DEMO-003","expected":"4","counted":"5.5","state":"Sobrante","difference":"1.5"},{"article":"DEMO-004","expected":"3","counted":"0","state":"Faltante","difference":"-3"},{"article":"DEMO-005","expected":"6","counted":null,"state":"Sin contar","difference":null}],"expected_counted_lines":4,"expected_pending_lines":1,"expected_net_difference":"-2.5"}</script>
+<script>
+const original=JSON.parse(document.getElementById('scenario-data').textContent);
+let rows=structuredClone(original.lines);
+const milli=v=>Math.round(Number(v)*1000);
+const fmt=n=>{const s=(n/1000).toFixed(3);return s.replace(/\.0+$/,'').replace(/(\.\d*?)0+$/,'$1')};
+function render(){
+ const body=document.getElementById('rows');body.replaceChildren();
+ let counted=0,pending=0,net=0,exact=0;
+ for(const item of rows){
+  const tr=document.createElement('tr');const countedValue=item.counted;
+  let difference=null,state='Sin contar';
+  if(countedValue!==null&&countedValue!==''){counted++;difference=milli(countedValue)-milli(item.expected);net+=difference;state=difference===0?'Coincide':difference<0?'Faltante':'Sobrante';if(difference===0)exact++}else pending++;
+  const id=document.createElement('td');id.textContent=item.article;
+  const expected=document.createElement('td');expected.textContent=item.expected;
+  const inputCell=document.createElement('td');const input=document.createElement('input');input.type='number';input.step='0.001';input.min='0';input.value=countedValue===null?'':countedValue;input.setAttribute('aria-label','Conteo físico para '+item.article);
+  input.addEventListener('change',()=>{item.counted=input.value===''?null:input.value;render()});inputCell.append(input);
+  const delta=document.createElement('td');delta.textContent=difference===null?'Pendiente':fmt(difference);
+  const stateCell=document.createElement('td');stateCell.className='status '+(state==='Coincide'?'ok':state==='Sin contar'?'warn':state==='Faltante'||state==='Sobrante'?'bad':'');stateCell.textContent=state;
+  tr.append(id,expected,inputCell,delta,stateCell);body.append(tr)
+ }
+ const values=[['Contadas',counted],['Pendientes',pending],['Coinciden',exact],['Diferencia neta',fmt(net)]];
+ document.getElementById('summary').replaceChildren(...values.map(([label,value])=>{const d=document.createElement('div');d.className='metric';const l=document.createElement('span');l.textContent=label;const v=document.createElement('strong');v.textContent=value;d.append(l,v);return d}));
+ document.getElementById('status').textContent='Los pendientes no participan en la diferencia.';
+}
+document.getElementById('reset').addEventListener('click',()=>{rows=structuredClone(original.lines);render()});
+render();
+</script></main></body></html>

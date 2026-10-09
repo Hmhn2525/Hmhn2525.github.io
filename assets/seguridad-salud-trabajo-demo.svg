@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="824" viewBox="0 0 1280 824" role="img" aria-labelledby="title desc">
+<title id="title">Validación de catálogos y fechas · mockup sintético</title>
+<desc id="desc">Seis registros ficticios; regla temporal de cinco días marcada como ejercicio didáctico. Todos los valores son ficticios. No es captura de la interfaz operativa.</desc>
+<rect width="1280" height="100%" rx="22" fill="#f3f6fb"/>
+<rect width="1280" height="72" rx="22" fill="#14243a"/>
+<rect y="54" width="1280" height="18" fill="#14243a"/>
+<text x="44" y="45" fill="#fff" font-size="20" font-family="Segoe UI,Arial,sans-serif" font-weight="700">PORTAFOLIO / LABORATORIO</text>
+<text x="1234" y="45" fill="#b9c9e2" text-anchor="end" font-size="14" font-family="Segoe UI,Arial,sans-serif">SOLO DATOS FICTICIOS</text>
+<text x="48" y="116" fill="#17233b" font-size="30" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Validación de catálogos y fechas</text>
+<text x="48" y="145" fill="#506078" font-size="16" font-family="Segoe UI,Arial,sans-serif">Seis registros ficticios; regla temporal de cinco días marcada como ejercicio didáctico.</text>
+<rect x="946" y="89" width="286" height="42" rx="9" fill="#fff1d0" stroke="#96600c" stroke-width="2"/>
+<text x="1089" y="116" text-anchor="middle" fill="#694300" font-size="15" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MOCKUP SINTÉTICO · NO UI ORIGINAL</text>
+<rect x="48.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="64.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Registros</text>
+<text x="64.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">6</text>
+<text x="64.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">datos inventados</text>
+<rect x="348.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="364.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Regla</text>
+<text x="364.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">5 días</text>
+<text x="364.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">solo didáctica</text>
+<rect x="648.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="664.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Casos válidos</text>
+<text x="664.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">1</text>
+<text x="664.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">sin señales</text>
+<rect x="948.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="964.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Casos señalados</text>
+<text x="964.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">5</text>
+<text x="964.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">catálogo/fecha</text>
+<rect x="48" y="278" width="1184" height="332" rx="14" fill="#fff" stroke="#cbd5e1"/>
+<text x="70" y="307" fill="#17233b" font-size="18" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Vista de resultados ficticios</text>
+<text x="1210" y="307" text-anchor="end" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">Escenario público · lectura local</text>
+<rect x="70" y="320" width="1140" height="38" rx="5" fill="#eaf0fa"/>
+<text x="80.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Registro demo</text>
+<text x="308.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Referencia demo</text>
+<text x="536.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Recepción</text>
+<text x="764.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Límite</text>
+<text x="992.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Resultado</text>
+<rect x="70" y="321" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-001</text>
+<text x="308.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-001</text>
+<text x="536.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-08</text>
+<text x="992.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Válido</text>
+<text x="80.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-002</text>
+<text x="308.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-404</text>
+<text x="536.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-06</text>
+<text x="992.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">catalog_missing</text>
+<rect x="70" y="407" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-003</text>
+<text x="308.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-002</text>
+<text x="536.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-06</text>
+<text x="992.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">catalog_inactive</text>
+<text x="80.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-004</text>
+<text x="308.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-001</text>
+<text x="536.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-04</text>
+<text x="992.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">deadline_before_received</text>
+<rect x="70" y="493" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-005</text>
+<text x="308.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-001</text>
+<text x="536.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-11</text>
+<text x="992.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">deadline_exceeds_max</text>
+<text x="80.0" y="561" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-SST-006</text>
+<text x="308.0" y="561" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CAT-001</text>
+<text x="536.0" y="561" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-01-05</text>
+<text x="764.0" y="561" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2026-02-30</text>
+<text x="992.0" y="561" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">deadline_invalid_date</text>
+<rect x="48" y="624" width="1184" height="48" rx="10" fill="#e8f0ff" stroke="#b8c9e4"/>
+<text x="66" y="653" fill="#213d70" font-size="14" font-family="Segoe UI,Arial,sans-serif">Sin nombres, datos personales ni información clínica; no llama Forms, Sheets o GAS.</text>
+<rect x="48" y="674" width="1184" height="125" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="68" y="701" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ORIGEN · </tspan>Fixture JSON y utilidades locales del repositorio público SST.</text>
+<text x="68" y="727" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">FECHA · </tspan>2026-10-09<tspan dx="28" font-weight="700">VERSIÓN · </tspan>Validador didáctico · fixture 2026-10-09</text>
+<text x="68" y="754" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ALCANCE · </tspan>No representa regla operativa; fecha límite de cinco días inventada para el caso.</text>
+<text x="68" y="779" fill="#8b2d21" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="800">ILUSTRACIÓN VECTORIAL; NO ES CAPTURA DE UNA UI OPERATIVA.</text>
+</svg>

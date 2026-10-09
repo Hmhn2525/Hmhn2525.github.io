@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demostración independiente con datos ficticios y alcance explícito.">
+<title>SST · validación sintética · demo sintética</title>
+<style>
+:root{color-scheme:light;--ink:#17233b;--muted:#506078;--line:#cbd5e1;--blue:#214a9a;--soft:#f3f6fb;--focus:#a65c00}
+*{box-sizing:border-box}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{width:min(1100px,100%);margin:auto;padding:24px clamp(14px,4vw,38px) 52px}h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.2;margin:.35rem 0 .5rem}
+h2{font-size:1.2rem;margin:0 0 12px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.banner{border:2px solid #93600c;background:#fff3d6;border-radius:12px;padding:12px 15px;margin:0 0 20px;font-weight:650}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.button{min-height:42px;padding:9px 14px;border:1px solid #214a9a;border-radius:8px;background:#214a9a;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.button.secondary{background:#fff;color:#214a9a}.button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metric{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcff}.metric span{display:block;color:var(--muted);font-size:.85rem}.metric strong{display:block;font-size:1.25rem;margin-top:4px}
+.table-wrap{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;background:#fff}caption{text-align:left;padding:9px 11px;color:var(--muted)}th,td{padding:9px 11px;border-bottom:1px solid #e1e7ef;text-align:left;vertical-align:top}thead th{background:#edf2f9;white-space:nowrap}tbody tr:last-child td{border-bottom:0}
+input,select{font:inherit;min-height:40px;border:1px solid #8190a5;border-radius:7px;padding:6px 8px;background:white;color:var(--ink)}input[type=number]{width:105px}
+.muted{color:var(--muted)}.status{font-weight:700}.status.ok{color:#17623c}.status.warn{color:#805000}.status.bad{color:#a32020}.event-list{padding-left:20px}.event-list li{margin:5px 0}
+@media(max-width:760px){.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:14px}}
+@media(max-width:380px){main{padding-inline:12px}.summary{gap:7px}.metric{padding:9px}.metric strong{font-size:1.05rem}.button{width:100%}}
+</style>
+</head><body><main>
+<div class="banner" role="note"><strong>Demo sintética e independiente.</strong> Datos inventados · sin servicios externos · cambios solo en memoria · no es la UI operativa.</div>
+<header><p class="eyebrow">PORTAFOLIO · EJEMPLO REPRODUCIBLE</p><h1>SST · validación sintética</h1><p class="muted">Catálogos y fechas con seis registros inventados. El plazo máximo de cinco días es didáctico.</p></header>
+
+<section class="panel"><h2>Validar catálogo y plazo didáctico</h2><p>La regla de cinco días naturales solo existe en este escenario ficticio.</p>
+<div class="toolbar"><button class="button" id="run" type="button">Ejecutar validación</button><button class="button secondary" id="reset" type="button">Limpiar resultado</button></div></section>
+<section class="panel"><div class="summary" id="summary" aria-live="polite"></div></section>
+<section class="panel"><div class="table-wrap" tabindex="0" role="region" aria-label="Resultados de validación desplazables"><table><caption>Sin personas ni información clínica</caption><thead><tr><th>Registro</th><th>Referencia</th><th>Recepción</th><th>Fecha límite</th><th>Resultado</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+
+<footer class="panel"><p><strong>Origen:</strong> fixture ficticia del repositorio · <strong>Fecha:</strong> 2026-10-09 · <strong>Versión:</strong> ejemplo público independiente.</p>
+<p><strong>Alcance:</strong> Catálogos y fechas con seis registros inventados. El plazo máximo de cinco días es didáctico. No acredita interfaz original, acceso, persistencia o aceptación operativa.</p>
+<a href="../README.md">Volver a la documentación del ejemplo</a></footer>
+<script id="scenario-data" type="application/json">{"synthetic":true,"scope":"Illustrative validation only. Catalogs and deadline rule are invented.","deadline_rule":{"maximum_calendar_days":5},"catalog":[{"reference":"DEMO-CAT-001","active":true,"label":"Categoría administrativa demo"},{"reference":"DEMO-CAT-002","active":false,"label":"Categoría inactiva demo"}],"records":[{"record":"DEMO-SST-001","catalog_reference":"DEMO-CAT-001","received_date":"2026-01-05","deadline":"2026-01-08","expected_issues":[]},{"record":"DEMO-SST-002","catalog_reference":"DEMO-CAT-404","received_date":"2026-01-05","deadline":"2026-01-06","expected_issues":["catalog_missing"]},{"record":"DEMO-SST-003","catalog_reference":"DEMO-CAT-002","received_date":"2026-01-05","deadline":"2026-01-06","expected_issues":["catalog_inactive"]},{"record":"DEMO-SST-004","catalog_reference":"DEMO-CAT-001","received_date":"2026-01-05","deadline":"2026-01-04","expected_issues":["deadline_before_received"]},{"record":"DEMO-SST-005","catalog_reference":"DEMO-CAT-001","received_date":"2026-01-05","deadline":"2026-01-11","expected_issues":["deadline_exceeds_max"]},{"record":"DEMO-SST-006","catalog_reference":"DEMO-CAT-001","received_date":"2026-01-05","deadline":"2026-02-30","expected_issues":["deadline_invalid_date"]}]}</script>
+<script>
+const scenario=JSON.parse(document.getElementById('scenario-data').textContent);let results=null;
+function parseDate(value){const match=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value||'');if(!match)return null;const parts=match.slice(1).map(Number);const date=new Date(Date.UTC(parts[0],parts[1]-1,parts[2]));return date.getUTCFullYear()===parts[0]&&date.getUTCMonth()===parts[1]-1&&date.getUTCDate()===parts[2]?date:null}
+function validate(record){const issues=[];const catalog=scenario.catalog.find(item=>item.reference===record.catalog_reference);if(!catalog)issues.push('Referencia ausente');else if(!catalog.active)issues.push('Catálogo inactivo');const start=parseDate(record.received_date),end=parseDate(record.deadline);if(!end)issues.push('Fecha imposible o formato inválido');else if(start){const days=(end-start)/86400000;if(days<0)issues.push('Límite anterior a recepción');else if(days>scenario.deadline_rule.maximum_calendar_days)issues.push('Supera plazo didáctico')}return issues}
+function render(){const summary=document.getElementById('summary');summary.replaceChildren();const valid=results?results.filter(x=>x.issues.length===0).length:0;const flagged=results?results.length-valid:0;summary.replaceChildren(...[['Registros',scenario.records.length],['Válidos',results?valid:'Sin ejecutar'],['Con señales',results?flagged:'Pendiente'],['Regla',scenario.deadline_rule.maximum_calendar_days+' días · didáctica']].map(([a,b])=>{const d=document.createElement('div');d.className='metric';const s=document.createElement('span');s.textContent=a;const strong=document.createElement('strong');strong.textContent=b;d.append(s,strong);return d}));const body=document.getElementById('rows');body.replaceChildren();for(const item of results||[]){const tr=document.createElement('tr');for(const value of [item.record.record,item.record.catalog_reference,item.record.received_date,item.record.deadline,item.issues.join(', ')||'Válido']){const td=document.createElement('td');td.textContent=value;td.className=value==='Válido'?'status ok':'';tr.append(td)}body.append(tr)}}
+document.getElementById('run').addEventListener('click',()=>{results=scenario.records.map(record=>({record,issues:validate(record)}));render()});document.getElementById('reset').addEventListener('click',()=>{results=null;render()});render();
+</script></main></body></html>

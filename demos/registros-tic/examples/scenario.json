@@ -1,0 +1,90 @@
+{
+  "synthetic": true,
+  "scope": "Didactic ticket lifecycle and aggregate report; not application output.",
+  "report_period": "2026-10",
+  "tickets": [
+    {
+      "id": "DEMO-TIC-001",
+      "created_at": "2026-10-06T09:00:00",
+      "requester": "Usuario Demo 01",
+      "asset_code": "DEMO-LAP-001",
+      "category": "Hardware / Equipo",
+      "description": "Revisión ficticia de equipo de prueba.",
+      "technician": "Técnico Demo A",
+      "status_history": [
+        { "status": "Pendiente", "at": "2026-10-06T09:00:00" },
+        { "status": "En Proceso", "at": "2026-10-06T09:20:00" },
+        { "status": "Atendido", "at": "2026-10-06T09:50:00" }
+      ]
+    },
+    {
+      "id": "DEMO-TIC-002",
+      "created_at": "2026-10-06T09:05:00",
+      "requester": "Usuario Demo 02",
+      "asset_code": "DEMO-PC-001",
+      "category": "Redes y Conectividad",
+      "description": "Revisión ficticia de conectividad local.",
+      "technician": "Técnico Demo A",
+      "status_history": [
+        { "status": "Pendiente", "at": "2026-10-06T09:05:00" },
+        { "status": "En Proceso", "at": "2026-10-06T09:25:00" }
+      ]
+    },
+    {
+      "id": "DEMO-TIC-003",
+      "created_at": "2026-10-06T09:10:00",
+      "requester": "Usuario Demo 03",
+      "asset_code": "DEMO-IMP-001",
+      "category": "Hardware / Equipo",
+      "description": "Inspección ficticia pendiente de iniciar.",
+      "technician": "Técnico Demo B",
+      "status_history": [
+        { "status": "Pendiente", "at": "2026-10-06T09:10:00" }
+      ]
+    },
+    {
+      "id": "DEMO-TIC-004",
+      "created_at": "2026-10-06T09:15:00",
+      "requester": "Usuario Demo 01",
+      "asset_code": "DEMO-IMP-001",
+      "category": "Impresoras y Escáneres",
+      "description": "Resolución ficticia de impresión de prueba.",
+      "technician": "Técnico Demo B",
+      "status_history": [
+        { "status": "Pendiente", "at": "2026-10-06T09:15:00" },
+        { "status": "En Proceso", "at": "2026-10-06T09:30:00" },
+        { "status": "Atendido", "at": "2026-10-06T10:00:00" },
+        { "status": "Cerrado", "at": "2026-10-06T10:10:00" }
+      ]
+    },
+    {
+      "id": "DEMO-TIC-005",
+      "created_at": "2026-10-06T10:20:00",
+      "requester": "Usuario Demo 02",
+      "asset_code": "DEMO-PC-001",
+      "category": "Software / Aplicaciones",
+      "description": "Revisión ficticia de aplicación de prueba.",
+      "technician": "Técnico Demo A",
+      "status_history": [
+        { "status": "Pendiente", "at": "2026-10-06T10:20:00" },
+        { "status": "Atendido", "at": "2026-10-06T10:45:00" }
+      ]
+    }
+  ],
+  "expected_report": {
+    "total_tickets": 5,
+    "open_tickets": 2,
+    "by_latest_state": {
+      "Pendiente": 1,
+      "En Proceso": 1,
+      "Atendido": 2,
+      "Cerrado": 1
+    },
+    "by_category": {
+      "Hardware / Equipo": 2,
+      "Redes y Conectividad": 1,
+      "Impresoras y Escáneres": 1,
+      "Software / Aplicaciones": 1
+    }
+  }
+}

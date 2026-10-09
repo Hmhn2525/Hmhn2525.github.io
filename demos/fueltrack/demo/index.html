@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demostración independiente con datos ficticios y alcance explícito.">
+<title>FuelTrack · reintento sintético · demo sintética</title>
+<style>
+:root{color-scheme:light;--ink:#17233b;--muted:#506078;--line:#cbd5e1;--blue:#214a9a;--soft:#f3f6fb;--focus:#a65c00}
+*{box-sizing:border-box}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{width:min(1100px,100%);margin:auto;padding:24px clamp(14px,4vw,38px) 52px}h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.2;margin:.35rem 0 .5rem}
+h2{font-size:1.2rem;margin:0 0 12px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.banner{border:2px solid #93600c;background:#fff3d6;border-radius:12px;padding:12px 15px;margin:0 0 20px;font-weight:650}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.button{min-height:42px;padding:9px 14px;border:1px solid #214a9a;border-radius:8px;background:#214a9a;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.button.secondary{background:#fff;color:#214a9a}.button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.metric{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcff}.metric span{display:block;color:var(--muted);font-size:.85rem}.metric strong{display:block;font-size:1.25rem;margin-top:4px}
+.table-wrap{overflow:auto;max-width:100%;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;background:#fff}caption{text-align:left;padding:9px 11px;color:var(--muted)}th,td{padding:9px 11px;border-bottom:1px solid #e1e7ef;text-align:left;vertical-align:top}thead th{background:#edf2f9;white-space:nowrap}tbody tr:last-child td{border-bottom:0}
+input,select{font:inherit;min-height:40px;border:1px solid #8190a5;border-radius:7px;padding:6px 8px;background:white;color:var(--ink)}input[type=number]{width:105px}
+.muted{color:var(--muted)}.status{font-weight:700}.status.ok{color:#17623c}.status.warn{color:#805000}.status.bad{color:#a32020}.event-list{padding-left:20px}.event-list li{margin:5px 0}
+@media(max-width:760px){.summary{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:14px}}
+@media(max-width:380px){main{padding-inline:12px}.summary{gap:7px}.metric{padding:9px}.metric strong{font-size:1.05rem}.button{width:100%}}
+</style>
+</head><body><main>
+<div class="banner" role="note"><strong>Demo sintética e independiente.</strong> Datos inventados · sin servicios externos · cambios solo en memoria · no es la UI operativa.</div>
+<header><p class="eyebrow">PORTAFOLIO · EJEMPLO REPRODUCIBLE</p><h1>FuelTrack · reintento sintético</h1><p class="muted">Dos solicitudes de 20 L con la misma clave producen un solo débito en este modelo local.</p></header>
+
+<section class="panel"><h2>Ejecutar reintentos</h2><p>Ambos intentos comparten una clave sintética. La demo mantiene recibos solo en memoria.</p>
+<div class="toolbar"><button class="button" id="run" type="button">Ejecutar los dos intentos</button><button class="button secondary" id="reset" type="button">Reiniciar escenario</button></div></section>
+<section class="panel"><div class="summary" id="summary" aria-live="polite"></div></section>
+<section class="panel"><div class="table-wrap" tabindex="0" role="region" aria-label="Intentos desplazables"><table><caption>Resultado del modelo de idempotencia didáctico</caption><thead><tr><th>Intento</th><th>Clave</th><th>Litros solicitados</th><th>Débito adicional</th><th>Resultado</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+
+<footer class="panel"><p><strong>Origen:</strong> fixture ficticia del repositorio · <strong>Fecha:</strong> 2026-10-09 · <strong>Versión:</strong> ejemplo público independiente.</p>
+<p><strong>Alcance:</strong> Dos solicitudes de 20 L con la misma clave producen un solo débito en este modelo local. No acredita interfaz original, acceso, persistencia o aceptación operativa.</p>
+<a href="../README.md">Volver a la documentación del ejemplo</a></footer>
+<script id="scenario-data" type="application/json">{"synthetic":true,"scope":"In-memory idempotency illustration; no Google service calls.","unit":"DEMO-UNIT-001","warehouse":"Almacén Demo A","approved_liters":"100","attempts":[{"number":1,"operation_key":"DEMO-OP-001","liters":"20"},{"number":2,"operation_key":"DEMO-OP-001","liters":"20"}],"expected_unique_dispatches":1,"expected_debited_liters":"20","expected_remaining_liters":"80","expected_retry_additional_liters":"0"}</script>
+<script>
+const scenario=JSON.parse(document.getElementById('scenario-data').textContent);let result=null;
+function render(){
+ const summary=document.getElementById('summary');summary.replaceChildren();
+ const cards=result?[['Cuota',scenario.approved_liters+' L'],['Débito único',result.debited+' L'],['Saldo final',result.balance+' L'],['Intentos',String(result.rows.length)]]:[['Cuota',scenario.approved_liters+' L'],['Débito','Sin ejecutar'],['Saldo','Pendiente'],['Alcance','Solo memoria']];
+ summary.replaceChildren(...cards.map(([a,b])=>{const d=document.createElement('div');d.className='metric';const s=document.createElement('span');s.textContent=a;const strong=document.createElement('strong');strong.textContent=b;d.append(s,strong);return d}));
+ const body=document.getElementById('rows');body.replaceChildren();
+ for(const row of result?result.rows:[]){const tr=document.createElement('tr');for(const value of [row.number,row.key,row.request+' L',row.debit+' L',row.status]){const td=document.createElement('td');td.textContent=value;tr.append(td)}body.append(tr)}
+}
+document.getElementById('run').addEventListener('click',()=>{
+ let balance=Number(scenario.approved_liters);let debited=0;const receipts=new Map();const rows=[];
+ for(const attempt of scenario.attempts){const prior=receipts.get(attempt.operation_key);let debit=0,status='Débito registrado';if(prior!==undefined){status='Recibo anterior reutilizado'}else{debit=Number(attempt.liters);debited+=debit;balance-=debit;receipts.set(attempt.operation_key,{liters:debit})}rows.push({number:String(attempt.number),key:attempt.operation_key,request:attempt.liters,debit:String(debit),status})}
+ result={debited:String(debited),balance:String(balance),rows};render();
+});
+document.getElementById('reset').addEventListener('click',()=>{result=null;render()});render();
+</script></main></body></html>

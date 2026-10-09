@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="781" viewBox="0 0 1280 781" role="img" aria-labelledby="title desc">
+<title id="title">Dashboard agrícola ficticio · mockup sintético</title>
+<desc id="desc">Modelo de centros y periodos con vistas agregadas; la fuente real solo guio categorías generales. Todos los valores son ficticios. No es captura de la interfaz operativa.</desc>
+<rect width="1280" height="100%" rx="22" fill="#f3f6fb"/>
+<rect width="1280" height="72" rx="22" fill="#14243a"/>
+<rect y="54" width="1280" height="18" fill="#14243a"/>
+<text x="44" y="45" fill="#fff" font-size="20" font-family="Segoe UI,Arial,sans-serif" font-weight="700">PORTAFOLIO / LABORATORIO</text>
+<text x="1234" y="45" fill="#b9c9e2" text-anchor="end" font-size="14" font-family="Segoe UI,Arial,sans-serif">SOLO DATOS FICTICIOS</text>
+<text x="48" y="116" fill="#17233b" font-size="30" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Dashboard agrícola ficticio</text>
+<text x="48" y="145" fill="#506078" font-size="16" font-family="Segoe UI,Arial,sans-serif">Modelo de centros y periodos con vistas agregadas; la fuente real solo guio categorías generales.</text>
+<rect x="946" y="89" width="286" height="42" rx="9" fill="#fff1d0" stroke="#96600c" stroke-width="2"/>
+<text x="1089" y="116" text-anchor="middle" fill="#694300" font-size="15" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MOCKUP SINTÉTICO · NO UI ORIGINAL</text>
+<rect x="48.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="64.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Combinaciones</text>
+<text x="64.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">24</text>
+<text x="64.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">4 centros × 6 periodos</text>
+<rect x="348.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="364.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Producción</text>
+<text x="364.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">1,768</text>
+<text x="364.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">unidades inventadas</text>
+<rect x="648.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="664.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Costos</text>
+<text x="664.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MXN 12,025.00</text>
+<text x="664.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">fixture SQLite</text>
+<rect x="948.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="964.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Costo ponderado</text>
+<text x="964.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MXN 6.79</text>
+<text x="964.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">solo pares completos</text>
+<rect x="48" y="278" width="1184" height="289" rx="14" fill="#fff" stroke="#cbd5e1"/>
+<text x="70" y="307" fill="#17233b" font-size="18" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Vista de resultados ficticios</text>
+<text x="1210" y="307" text-anchor="end" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">Escenario público · lectura local</text>
+<rect x="70" y="320" width="1140" height="38" rx="5" fill="#eaf0fa"/>
+<text x="80.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Centro demo</text>
+<text x="270.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Periodo demo</text>
+<text x="460.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Unidades</text>
+<text x="650.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Costo</text>
+<text x="840.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Costo/unidad</text>
+<text x="1030.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Señal</text>
+<rect x="70" y="321" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CC-001</text>
+<text x="270.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Enero 2026</text>
+<text x="460.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">100</text>
+<text x="650.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">MXN 500.00</text>
+<text x="840.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">5.00</text>
+<text x="1030.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Sin alertas</text>
+<text x="80.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CC-002</text>
+<text x="270.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Marzo 2026</text>
+<text x="460.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">0</text>
+<text x="650.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">MXN 100.00</text>
+<text x="840.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="1030.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">zero_production</text>
+<rect x="70" y="407" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CC-003</text>
+<text x="270.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Febrero 2026</text>
+<text x="460.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">55</text>
+<text x="650.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="840.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="1030.0" y="432" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">missing_cost</text>
+<text x="80.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CC-003</text>
+<text x="270.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Abril 2026</text>
+<text x="460.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="650.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">MXN 300.00</text>
+<text x="840.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Pendiente</text>
+<text x="1030.0" y="475" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">missing_production</text>
+<rect x="70" y="493" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-CC-004</text>
+<text x="270.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Junio 2026</text>
+<text x="460.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">60</text>
+<text x="650.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">MXN 1800.00</text>
+<text x="840.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">30.00</text>
+<text x="1030.0" y="518" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">high_unit_cost</text>
+<rect x="48" y="581" width="1184" height="48" rx="10" fill="#e8f0ff" stroke="#b8c9e4"/>
+<text x="66" y="610" fill="#213d70" font-size="14" font-family="Segoe UI,Arial,sans-serif">Los casos cero y pendiente permanecen distintos; las alertas usan las mismas filas verificadas del CSV.</text>
+<rect x="48" y="631" width="1184" height="125" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="68" y="658" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ORIGEN · </tspan>Fixture CSV + salida SQLite del repositorio; estructura general tomada como referencia, sin leer filas reales.</text>
+<text x="68" y="684" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">FECHA · </tspan>2026-10-09<tspan dx="28" font-weight="700">VERSIÓN · </tspan>Demo DWH independiente · fixture 2026-10-09</text>
+<text x="68" y="711" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ALCANCE · </tspan>No acredita BigQuery, Looker Studio conectado ni datos del Sheet enlazado.</text>
+<text x="68" y="736" fill="#8b2d21" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="800">ILUSTRACIÓN VECTORIAL; NO ES CAPTURA DE UNA UI OPERATIVA.</text>
+</svg>

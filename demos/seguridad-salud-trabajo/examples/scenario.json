@@ -1,0 +1,63 @@
+{
+  "synthetic": true,
+  "scope": "Illustrative validation only. Catalogs and deadline rule are invented.",
+  "deadline_rule": {
+    "maximum_calendar_days": 5
+  },
+  "catalog": [
+    {
+      "reference": "DEMO-CAT-001",
+      "active": true,
+      "label": "Categoría administrativa demo"
+    },
+    {
+      "reference": "DEMO-CAT-002",
+      "active": false,
+      "label": "Categoría inactiva demo"
+    }
+  ],
+  "records": [
+    {
+      "record": "DEMO-SST-001",
+      "catalog_reference": "DEMO-CAT-001",
+      "received_date": "2026-01-05",
+      "deadline": "2026-01-08",
+      "expected_issues": []
+    },
+    {
+      "record": "DEMO-SST-002",
+      "catalog_reference": "DEMO-CAT-404",
+      "received_date": "2026-01-05",
+      "deadline": "2026-01-06",
+      "expected_issues": ["catalog_missing"]
+    },
+    {
+      "record": "DEMO-SST-003",
+      "catalog_reference": "DEMO-CAT-002",
+      "received_date": "2026-01-05",
+      "deadline": "2026-01-06",
+      "expected_issues": ["catalog_inactive"]
+    },
+    {
+      "record": "DEMO-SST-004",
+      "catalog_reference": "DEMO-CAT-001",
+      "received_date": "2026-01-05",
+      "deadline": "2026-01-04",
+      "expected_issues": ["deadline_before_received"]
+    },
+    {
+      "record": "DEMO-SST-005",
+      "catalog_reference": "DEMO-CAT-001",
+      "received_date": "2026-01-05",
+      "deadline": "2026-01-11",
+      "expected_issues": ["deadline_exceeds_max"]
+    },
+    {
+      "record": "DEMO-SST-006",
+      "catalog_reference": "DEMO-CAT-001",
+      "received_date": "2026-01-05",
+      "deadline": "2026-02-30",
+      "expected_issues": ["deadline_invalid_date"]
+    }
+  ]
+}

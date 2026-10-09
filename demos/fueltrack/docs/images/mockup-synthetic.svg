@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="652" viewBox="0 0 1280 652" role="img" aria-labelledby="title desc">
+<title id="title">Reintento de despacho · mockup sintético</title>
+<desc id="desc">Escenario de idempotencia ilustrativo, sin invocar GAS, Sheets ni servicios remotos. Todos los valores son ficticios. No es captura de la interfaz operativa.</desc>
+<rect width="1280" height="100%" rx="22" fill="#f3f6fb"/>
+<rect width="1280" height="72" rx="22" fill="#14243a"/>
+<rect y="54" width="1280" height="18" fill="#14243a"/>
+<text x="44" y="45" fill="#fff" font-size="20" font-family="Segoe UI,Arial,sans-serif" font-weight="700">PORTAFOLIO / LABORATORIO</text>
+<text x="1234" y="45" fill="#b9c9e2" text-anchor="end" font-size="14" font-family="Segoe UI,Arial,sans-serif">SOLO DATOS FICTICIOS</text>
+<text x="48" y="116" fill="#17233b" font-size="30" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Reintento de despacho</text>
+<text x="48" y="145" fill="#506078" font-size="16" font-family="Segoe UI,Arial,sans-serif">Escenario de idempotencia ilustrativo, sin invocar GAS, Sheets ni servicios remotos.</text>
+<rect x="946" y="89" width="286" height="42" rx="9" fill="#fff1d0" stroke="#96600c" stroke-width="2"/>
+<text x="1089" y="116" text-anchor="middle" fill="#694300" font-size="15" font-family="Segoe UI,Arial,sans-serif" font-weight="800">MOCKUP SINTÉTICO · NO UI ORIGINAL</text>
+<rect x="48.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="64.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Cuota</text>
+<text x="64.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">100 L</text>
+<text x="64.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">asignación inventada</text>
+<rect x="348.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="364.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Intentos</text>
+<text x="364.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">2</text>
+<text x="364.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">misma clave</text>
+<rect x="648.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="664.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Débito único</text>
+<text x="664.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">20 L</text>
+<text x="664.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">una operación</text>
+<rect x="948.0" y="165" width="284.0" height="94" rx="13" fill="#fff" stroke="#cbd5e1"/>
+<text x="964.0" y="190" fill="#506078" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Saldo final</text>
+<text x="964.0" y="225" fill="#214a9a" font-size="25" font-family="Segoe UI,Arial,sans-serif" font-weight="800">80 L</text>
+<text x="964.0" y="247" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">cálculo local</text>
+<rect x="48" y="278" width="1184" height="160" rx="14" fill="#fff" stroke="#cbd5e1"/>
+<text x="70" y="307" fill="#17233b" font-size="18" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Vista de resultados ficticios</text>
+<text x="1210" y="307" text-anchor="end" fill="#506078" font-size="12" font-family="Segoe UI,Arial,sans-serif">Escenario público · lectura local</text>
+<rect x="70" y="320" width="1140" height="38" rx="5" fill="#eaf0fa"/>
+<text x="80.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Intento</text>
+<text x="365.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Clave sintética</text>
+<text x="650.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Solicitud</text>
+<text x="935.0" y="344" fill="#22344f" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="700">Resultado</text>
+<rect x="70" y="321" width="1140" height="43" fill="#f8faff"/>
+<text x="80.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">1</text>
+<text x="365.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-OP-001</text>
+<text x="650.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">20 L</text>
+<text x="935.0" y="346" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Débito único</text>
+<text x="80.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">2</text>
+<text x="365.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">DEMO-OP-001</text>
+<text x="650.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">20 L</text>
+<text x="935.0" y="389" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif">Recibo previo</text>
+<rect x="48" y="452" width="1184" height="48" rx="10" fill="#e8f0ff" stroke="#b8c9e4"/>
+<text x="66" y="481" fill="#213d70" font-size="14" font-family="Segoe UI,Arial,sans-serif">El reintento reutiliza el recibo; litros adicionales esperados: 0 L.</text>
+<rect x="48" y="502" width="1184" height="125" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="68" y="529" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ORIGEN · </tspan>Fixture JSON y cálculo del verificador público de FuelTrack.</text>
+<text x="68" y="555" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">FECHA · </tspan>2026-10-09<tspan dx="28" font-weight="700">VERSIÓN · </tspan>Modelo de demostración · fixture 2026-10-09</text>
+<text x="68" y="582" fill="#17233b" font-size="13" font-family="Segoe UI,Arial,sans-serif"><tspan font-weight="700">ALCANCE · </tspan>Ilustra la regla en memoria; no prueba idempotencia desplegada, concurrencia o recuperación offline.</text>
+<text x="68" y="607" fill="#8b2d21" font-size="13" font-family="Segoe UI,Arial,sans-serif" font-weight="800">ILUSTRACIÓN VECTORIAL; NO ES CAPTURA DE UNA UI OPERATIVA.</text>
+</svg>
